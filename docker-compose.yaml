@@ -1,0 +1,78 @@
+version: "3.3"
+
+services:
+  nodered:
+    container_name: node-red
+    image: igate-ivpn.iplon.co.in:8080/iot-6.6/node-red-new:4.0.9
+    volumes:
+      - nodered-lib:/root/.node-red
+      - nodered-log:/var/log
+    network_mode: "host"
+    restart: always
+    privileged: true
+
+
+  nodered-1881:
+    container_name: node-red-1881
+    image: igate-ivpn.iplon.co.in:8080/iot-6.6/node-red-new:4.0.9
+    volumes:
+      - nodered-lib-1881:/root/.node-red
+      - nodered-log-1881:/var/log
+      - /home/iplon/repos/nodered-ports/1881/settings.js:/root/.node-red/settings.js
+      - /mnt/docker_common:/mnt/docker_common
+    network_mode: "host"
+    restart: always
+    privileged: true
+
+  nodered-1882:
+    container_name: node-red-1882
+    image: igate-ivpn.iplon.co.in:8080/iot-6.6/node-red-new:4.0.9
+    volumes:
+      - nodered-lib-1882:/root/.node-red
+      - nodered-log-1882:/var/log
+      - /home/iplon/repos/nodered-ports/1882/settings.js:/root/.node-red/settings.js
+      - /mnt/docker_common:/mnt/docker_common
+    network_mode: "host"
+    restart: always
+    privileged: true
+
+
+  rabbitmq:
+    container_name: rabbitMQ
+    image: igate-ivpn.iplon.co.in:8080/inverter-engine/rabbitmq:3.12.2
+    volumes:
+      - rabbitmq-etc:/etc/rabbitmq
+      - rabbitmq-log:/var/log
+    network_mode: "host"        
+    restart: always
+    privileged: true
+
+
+
+
+volumes:
+  nodered-lib:
+    external: true
+  nodered-log:
+    external: true
+
+
+  nodered-lib-1881:
+    external: true
+  nodered-log-1881:
+    external: true
+
+  nodered-lib-1882:
+    external: true
+  nodered-log-1882:
+    external: true
+
+
+
+
+  rabbitmq-etc:
+    external: true
+  rabbitmq-log:
+    external: true
+
+
