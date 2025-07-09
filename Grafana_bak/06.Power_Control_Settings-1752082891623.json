@@ -1,0 +1,2825 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 8,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "eeql8uq08xkw0a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "thresholdsStyle": {
+              "mode": "color",
+              "thresholds": []
+            }
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "dark-green",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 16,
+        "x": 6,
+        "y": 0
+      },
+      "id": 3,
+      "options": {
+        "alertCustomMessage": "",
+        "alwaysVisibleFilter": false,
+        "autoScroll": false,
+        "browserTabNamePattern": "",
+        "collapsedByDefault": false,
+        "customValue": false,
+        "dashboardVariable": "dashid",
+        "displayMode": "button",
+        "emptyValue": false,
+        "favorites": {
+          "addQuery": {},
+          "datasource": "",
+          "deleteQuery": {},
+          "enabled": false,
+          "getQuery": {},
+          "storage": "browser"
+        },
+        "filter": false,
+        "groupSelection": false,
+        "header": true,
+        "isMinimizeForTable": false,
+        "isUseLocalTime": false,
+        "minimizeOutputFormat": "text",
+        "padding": 10,
+        "persistent": false,
+        "saveSelectedGroup": false,
+        "saveSelectedGroupKey": "",
+        "selectedValues": {
+          "maxCount": 0,
+          "showSelected": false
+        },
+        "showGroupTotal": false,
+        "showLabel": false,
+        "showName": false,
+        "showResetButton": false,
+        "showTotal": false,
+        "statusSort": false,
+        "sticky": false,
+        "tabsInOrder": true,
+        "variable": "Screen"
+      },
+      "pluginVersion": "4.0.0",
+      "targets": [
+        {
+          "columns": [],
+          "data": "data,value\n$Screen,1",
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "eeql8uq08xkw0a"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "parser": "uql",
+          "refId": "A",
+          "root_selector": "",
+          "source": "inline",
+          "type": "csv",
+          "uql": "parse-csv",
+          "url": "",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-variable-panel"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "grafana"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "RATED POWER SETTINGS",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 10,
+        "x": 0,
+        "y": 2
+      },
+      "id": 12,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {
+          "titleSize": 40,
+          "valueSize": 20
+        },
+        "textMode": "name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "hide": false,
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "grafana"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "P_CONTROL SETTINGS",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 13,
+        "x": 11,
+        "y": 2
+      },
+      "id": 13,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {
+          "titleSize": 40,
+          "valueSize": 20
+        },
+        "textMode": "name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "hide": false,
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "ix-lCK3Vz"
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 5,
+        "x": 0,
+        "y": 3
+      },
+      "hideTimeOverride": true,
+      "id": 4,
+      "options": {
+        "buttonGroup": {
+          "orientation": "left",
+          "size": "md"
+        },
+        "confirmModal": {
+          "body": "Please confirm to update changed values",
+          "cancel": "Cancel",
+          "columns": {
+            "include": [
+              "name",
+              "oldValue",
+              "newValue"
+            ],
+            "name": "Label",
+            "newValue": "New Value",
+            "oldValue": "Old Value"
+          },
+          "confirm": "Confirm",
+          "elementDisplayMode": "modified",
+          "title": "Confirm update request"
+        },
+        "elementValueChanged": "context.panel.onOptionsChange({\n  ...context.panel.options,\n  elements: context.panel.elements,\n});",
+        "elements": [
+          {
+            "allowCustomValue": false,
+            "disabled": false,
+            "id": "grafana,13052,iplon,Line,PAC_MAX_SET_RX,INV_Peak_PAC,ClosedLoop,primary",
+            "labelWidth": 17,
+            "options": [
+              {
+                "id": "2772",
+                "label": "2772",
+                "type": "number",
+                "value": 2772
+              },
+              {
+                "id": "2520",
+                "label": "2520",
+                "type": "number",
+                "value": 2520
+              }
+            ],
+            "optionsSource": "Custom",
+            "queryField": {
+              "label": "A:PAC",
+              "refId": "A",
+              "value": "PAC"
+            },
+            "section": "yy",
+            "title": "INV_PEAK_PAC(KW)",
+            "tooltip": "",
+            "type": "select",
+            "uid": "4421f6f2-87b5-416b-a557-21247ce1f2f4",
+            "unit": "Write",
+            "value": 755,
+            "width": 12
+          },
+          {
+            "allowCustomValue": false,
+            "id": "max_pac",
+            "labelWidth": 17,
+            "options": [],
+            "optionsSource": "Custom",
+            "queryField": {
+              "label": "A:PAC",
+              "refId": "A",
+              "value": "PAC"
+            },
+            "section": "read",
+            "title": "",
+            "tooltip": "",
+            "type": "disabled",
+            "uid": "c31bacf2-9f91-490a-b61e-3aff97201640",
+            "unit": "Read",
+            "value": 750,
+            "width": 12
+          },
+          {
+            "allowCustomValue": false,
+            "disabled": false,
+            "id": "grafana,13084,iplon,Line,QAC_MAX_SET_RX,INV_Peak_QAC,ClosedLoop,primary",
+            "labelWidth": 17,
+            "options": [
+              {
+                "id": "1500",
+                "label": "1500",
+                "type": "number",
+                "value": 1500
+              }
+            ],
+            "queryField": {
+              "label": "B:QAC",
+              "refId": "B",
+              "value": "QAC"
+            },
+            "section": "write",
+            "title": "INV_PEAK_QAC(KVAr)",
+            "tooltip": "",
+            "type": "select",
+            "uid": "6f5e1afb-d181-49df-b868-dde2a299969a",
+            "unit": "Write",
+            "value": 250,
+            "width": 12
+          },
+          {
+            "allowCustomValue": false,
+            "id": "max_qac",
+            "labelWidth": 17,
+            "options": [],
+            "optionsSource": "Custom",
+            "queryField": {
+              "label": "B:QAC",
+              "refId": "B",
+              "value": "QAC"
+            },
+            "section": "read",
+            "title": "",
+            "tooltip": "",
+            "type": "disabled",
+            "uid": "1ee4afce-2d19-4e2f-9c74-5b6a08dfb917",
+            "unit": "Read",
+            "value": 250,
+            "width": 12
+          }
+        ],
+        "initial": {
+          "code": "context.panel.enableSubmit();\n",
+          "contentType": "application/json",
+          "getPayload": "return {\n  rawSql: '',\n  format: 'table',\n}",
+          "highlight": false,
+          "highlightColor": "red",
+          "method": "query",
+          "payload": {},
+          "payloadMode": "all"
+        },
+        "layout": {
+          "orientation": "horizontal",
+          "padding": 10,
+          "sectionVariant": "default",
+          "sections": [],
+          "variant": "single"
+        },
+        "reset": {
+          "backgroundColor": "light-blue",
+          "foregroundColor": "#000000",
+          "icon": "process",
+          "text": "Reset",
+          "variant": "custom"
+        },
+        "resetAction": {
+          "code": "if (context.panel.response && context.panel.response.ok) {\n  context.grafana.notifySuccess(['Update', 'Values updated successfully.']);\n  context.grafana.locationService.reload();\n} else {\n  context.grafana.notifyError(['Update', 'An error occured updating values.']);\n}",
+          "confirm": false,
+          "getPayload": "return {\n  rawSql: '',\n  format: 'table',\n}",
+          "mode": "initial",
+          "payload": {}
+        },
+        "saveDefault": {
+          "icon": "save",
+          "text": "Save Default",
+          "variant": "hidden"
+        },
+        "submit": {
+          "backgroundColor": "light-blue",
+          "foregroundColor": "#000000",
+          "icon": "check-circle",
+          "text": "Save",
+          "variant": "custom"
+        },
+        "sync": false,
+        "update": {
+          "code": "\n\n// Function to show the password prompt\nfunction showPasswordPrompt(callback) {\n  // Create modal elements\n  const modal = document.createElement('div');\n  const overlay = document.createElement('div');\n  const message = document.createElement('div');\n  const input = document.createElement('input');\n  const submitButton = document.createElement('button');\n  const cancelButton = document.createElement('button');\n\n  // Set attributes and styles\n  modal.style.position = 'fixed';\n  modal.style.left = '50%';\n  modal.style.top = '50%';\n  modal.style.transform = 'translate(-50%, -50%)';\n  modal.style.padding = '20px';\n  modal.style.backgroundColor = 'white';\n  modal.style.zIndex = '1000';\n  modal.style.borderRadius = '8px';\n  modal.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';\n\n  overlay.style.position = 'fixed';\n  overlay.style.top = '0';\n  overlay.style.left = '0';\n  overlay.style.width = '100%';\n  overlay.style.height = '100%';\n  overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';\n  overlay.style.zIndex = '999';\n\n  // Message above input\n  message.textContent = 'Please enter the password';\n  message.style.marginBottom = '10px';\n  message.style.fontSize = '16px';\n  message.style.fontWeight = 'bold';\n\n  // Input field\n  input.type = 'password';\n  input.placeholder = 'Enter password';\n  input.style.padding = '10px';\n  input.style.width = '100%';\n  input.style.marginBottom = '10px';\n  input.style.borderRadius = '4px';\n  input.style.border = '1px solid #ccc';\n\n  // Buttons\n  submitButton.textContent = 'Submit';\n  cancelButton.textContent = 'Cancel';\n  [submitButton, cancelButton].forEach(button => {\n    button.style.padding = '10px 20px';\n    button.style.marginRight = '10px';\n    button.style.borderRadius = '4px';\n    button.style.border = 'none';\n    button.style.cursor = 'pointer';\n    button.style.transition = 'background-color 0.3s';\n  });\n\n  // Button styles\n  submitButton.style.backgroundColor = '#4CAF50'; // Green\n  cancelButton.style.backgroundColor = '#f44336'; // Red\n\n  // Change button color on click\n  submitButton.addEventListener('mousedown', () => {\n    submitButton.style.backgroundColor = '#45a049'; // Darker green\n  });\n  submitButton.addEventListener('mouseup', () => {\n    submitButton.style.backgroundColor = '#4CAF50';\n  });\n\n  cancelButton.addEventListener('mousedown', () => {\n    cancelButton.style.backgroundColor = '#e53935'; // Darker red\n  });\n  cancelButton.addEventListener('mouseup', () => {\n    cancelButton.style.backgroundColor = '#f44336';\n  });\n\n  modal.appendChild(message);\n  modal.appendChild(input);\n  modal.appendChild(submitButton);\n  modal.appendChild(cancelButton);\n  document.body.appendChild(overlay);\n  document.body.appendChild(modal);\n\n  // Event listeners\n  submitButton.addEventListener('click', () => {\n    const password = input.value;\n    if (password !== \"iplon321\") {\n      context.grafana.notifyError([\"Error\", \"Incorrect password. Update not allowed.\"]);\n      return;\n    } else {\n      // Password is correct; proceed with your logic\n      console.log(\"Password accepted!\");\n      // Clean up\n      document.body.removeChild(modal);\n      document.body.removeChild(overlay);\n      callback(); // Call the next function to execute after password validation\n    }\n  });\n  input.addEventListener('keydown', (event) => {\n    if (event.key === 'Enter') {\n      submitButton.click(); // Trigger the submit button click\n    }\n    if (event.key === 'Escape') {\n      cancelButton.click(); // Trigger the cancel button click\n    }\n  });\n  cancelButton.addEventListener('click', () => {\n    // Clean up\n    document.body.removeChild(modal);\n    document.body.removeChild(overlay);\n  });\n}\n\n\n\nfunction sendRequests() {\n\n\n  var time = new Date().getTime();\n  // Initialize the body object\n  const body = {};\n  const body1 = {};\n\n  context.panel.options.elements.forEach((element) => {\n    // Parse element id to extract required information\n    var id1 = element.id;\n    var id2 = id1.split(\",\");\n\n    var source = id2[0];\n    var id = id2[1];\n    var user = id2[2];\n    var control = id2[3];\n    var mode = id2[4];\n    var tag_name = id2[5];\n    var type = id2[6];\n    var server = id2[7];\n\n    // Construct the body for the POST request\n    body1[\"time\"] = time;\n    body1[\"source\"] = source;\n    body1[\"user\"] = user;\n    body1[\"mode\"] = mode;\n    body1[\"id\"] = parseInt(id);\n    body1[\"val\"] = parseFloat(element.value);\n    body1[\"control\"] = control;\n    body1[\"tag_name\"] = tag_name;\n    body1[\"type\"] = type;\n    body1[\"server\"] = server;\n    console.log(\"CHECK\", body1);\n\n    /**\n     * Set URLs\n     */\n    const url1 = 'http://192.168.87.82:1880/endpoint/grafana';\n    //const url2 = 'http://192.168.87.82:1880/endpoint/grafana';\n\n    /**\n     * Fetch function\n     */\n    function sendRequest(url) {\n      return fetch(url, {\n        method: \"POST\",\n        headers: {\n          \"Content-Type\": \"application/json\",\n          \"PRIVATE-TOKEN\": \"$token\",  // Ensure 'token' is defined properly\n        },\n        body: JSON.stringify(body1),\n      })\n        .then((response) => {\n          if (response && response.ok) {\n            context.grafana.notifySuccess([\"Update\", \"Values updated successfully\"]);\n            // Uncomment if you want to re-fetch initial data after update\n            // initialRequest();\n          } else {\n            context.grafana.notifyError([\n              \"Error\",\n              `An error occurred updating values: ${response ? response.status : 'Unknown'}`,\n            ]);\n          }\n        })\n        .catch((error) => {\n          context.grafana.notifyError([\n            \"Error\",\n            `An error occurred updating values: ${error.message}`,\n          ]);\n        });\n    }\n\n    // Send requests to both URLs\n    sendRequest(url1);\n    //sendRequest(url2);\n  });\n}\nshowPasswordPrompt(sendRequests);",
+          "confirm": false,
+          "contentType": "application/json",
+          "getPayload": "const payload = {};\n\ncontext.panel.elements.forEach((element) => {\n  if (!element.value) {\n    return;\n  }\n\n  payload[element.id] = element.value;\n})\n\nreturn payload;\n\n/**\n * Data Source payload\n */ \nreturn {\n  rawSql: '',\n  format: 'table',\n};",
+          "method": "-",
+          "payload": {},
+          "payloadMode": "updated"
+        },
+        "updateEnabled": "manual"
+      },
+      "pluginVersion": "5.1.0",
+      "targets": [
+        {
+          "alias": "PAC",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ee1j2rhfotdz4e"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=",
+              "value": "MCR"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "UI"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "PAC_MAX_SET_RX"
+            }
+          ]
+        },
+        {
+          "alias": "QAC",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ee1j2rhfotdz4e"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=",
+              "value": "MCR"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "UI"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "QAC_MAX_SET_RX"
+            }
+          ]
+        }
+      ],
+      "timeFrom": "0y/y",
+      "title": "OVERALL INV_PEAK POWER",
+      "transparent": true,
+      "type": "volkovlabs-form-panel"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "ix-lCK3Vz"
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 5,
+        "x": 5,
+        "y": 3
+      },
+      "hideTimeOverride": true,
+      "id": 5,
+      "options": {
+        "buttonGroup": {
+          "orientation": "left",
+          "size": "md"
+        },
+        "confirmModal": {
+          "body": "Please confirm to update changed values",
+          "cancel": "Cancel",
+          "columns": {
+            "include": [
+              "name",
+              "oldValue",
+              "newValue"
+            ],
+            "name": "Label",
+            "newValue": "New Value",
+            "oldValue": "Old Value"
+          },
+          "confirm": "Confirm",
+          "elementDisplayMode": "modified",
+          "title": "Confirm update request"
+        },
+        "elementValueChanged": "context.panel.onOptionsChange({\n  ...context.panel.options,\n  elements: context.panel.elements,\n});",
+        "elements": [
+          {
+            "allowCustomValue": false,
+            "disabled": false,
+            "id": "grafana,13002,iplon,Line,BLOCK_PAC_MAX_SET_RX,ICR_Peak_PAC,ClosedLoop,primary",
+            "labelWidth": 17,
+            "options": [
+              {
+                "id": "277200",
+                "label": "277200",
+                "type": "number",
+                "value": 277200
+              },
+              {
+                "id": "207900",
+                "label": "207900",
+                "type": "number",
+                "value": 207900
+              }
+            ],
+            "queryField": {
+              "label": "A:PAC",
+              "refId": "A",
+              "value": "PAC"
+            },
+            "section": "",
+            "title": "ICR_PEAK_PAC(KW)",
+            "tooltip": "",
+            "type": "select",
+            "uid": "35da8a4a-bbc1-4ce1-bd95-97ae81e1d42d",
+            "unit": "Write",
+            "value": 277200,
+            "width": 12
+          },
+          {
+            "allowCustomValue": false,
+            "id": "max_pac",
+            "labelWidth": 17,
+            "options": [],
+            "optionsSource": "Custom",
+            "queryField": {
+              "label": "A:PAC",
+              "refId": "A",
+              "value": "PAC"
+            },
+            "section": "",
+            "title": "",
+            "tooltip": "",
+            "type": "disabled",
+            "uid": "eca66391-6f93-44ac-9c25-379664486769",
+            "unit": "Read",
+            "value": 27720,
+            "width": 12
+          },
+          {
+            "allowCustomValue": false,
+            "disabled": false,
+            "id": "grafana,13006,iplon,Line,BLOCK_QAC_MAX_SET_RX,ICR_Peak_QAC,ClosedLoop,primary",
+            "labelWidth": 17,
+            "options": [
+              {
+                "id": "150000",
+                "label": "150000",
+                "type": "number",
+                "value": 150000
+              },
+              {
+                "id": "112500",
+                "label": "112500",
+                "type": "number",
+                "value": 112500
+              }
+            ],
+            "queryField": {
+              "label": "B:QAC",
+              "refId": "B",
+              "value": "QAC"
+            },
+            "section": "",
+            "title": "ICR_PEAK_QAC(KVAr)",
+            "tooltip": "",
+            "type": "select",
+            "uid": "432a0f18-7cd8-42ff-947b-e980963628b5",
+            "unit": "Write",
+            "value": 150000,
+            "width": 12
+          },
+          {
+            "allowCustomValue": false,
+            "id": "max_qac",
+            "labelWidth": 17,
+            "options": [],
+            "optionsSource": "Custom",
+            "queryField": {
+              "label": "B:QAC",
+              "refId": "B",
+              "value": "QAC"
+            },
+            "section": "",
+            "title": "",
+            "tooltip": "",
+            "type": "disabled",
+            "uid": "a731eafd-4279-4cb8-ac29-2916c94ec83d",
+            "unit": "Read",
+            "value": 15000,
+            "width": 12
+          }
+        ],
+        "initial": {
+          "code": "context.panel.enableSubmit();",
+          "contentType": "application/json",
+          "getPayload": "return {\n  rawSql: '',\n  format: 'table',\n}",
+          "highlight": false,
+          "highlightColor": "red",
+          "method": "query",
+          "payload": {},
+          "payloadMode": "all"
+        },
+        "layout": {
+          "orientation": "horizontal",
+          "padding": 10,
+          "sectionVariant": "default",
+          "variant": "single"
+        },
+        "reset": {
+          "backgroundColor": "light-blue",
+          "foregroundColor": "#000000",
+          "icon": "process",
+          "text": "Reset",
+          "variant": "custom"
+        },
+        "resetAction": {
+          "code": "if (context.panel.response && context.panel.response.ok) {\n  context.grafana.notifySuccess(['Update', 'Values updated successfully.']);\n  context.grafana.locationService.reload();\n} else {\n  context.grafana.notifyError(['Update', 'An error occured updating values.']);\n}",
+          "confirm": false,
+          "getPayload": "return {\n  rawSql: '',\n  format: 'table',\n}",
+          "mode": "initial",
+          "payload": {}
+        },
+        "saveDefault": {
+          "icon": "save",
+          "text": "Save Default",
+          "variant": "hidden"
+        },
+        "submit": {
+          "backgroundColor": "light-blue",
+          "foregroundColor": "#000000",
+          "icon": "check-circle",
+          "text": "Save",
+          "variant": "custom"
+        },
+        "sync": false,
+        "update": {
+          "code": "\n\n// Function to show the password prompt\nfunction showPasswordPrompt(callback) {\n  // Create modal elements\n  const modal = document.createElement('div');\n  const overlay = document.createElement('div');\n  const message = document.createElement('div');\n  const input = document.createElement('input');\n  const submitButton = document.createElement('button');\n  const cancelButton = document.createElement('button');\n\n  // Set attributes and styles\n  modal.style.position = 'fixed';\n  modal.style.left = '50%';\n  modal.style.top = '50%';\n  modal.style.transform = 'translate(-50%, -50%)';\n  modal.style.padding = '20px';\n  modal.style.backgroundColor = 'white';\n  modal.style.zIndex = '1000';\n  modal.style.borderRadius = '8px';\n  modal.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';\n\n  overlay.style.position = 'fixed';\n  overlay.style.top = '0';\n  overlay.style.left = '0';\n  overlay.style.width = '100%';\n  overlay.style.height = '100%';\n  overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';\n  overlay.style.zIndex = '999';\n\n  // Message above input\n  message.textContent = 'Please enter the password';\n  message.style.marginBottom = '10px';\n  message.style.fontSize = '16px';\n  message.style.fontWeight = 'bold';\n\n  // Input field\n  input.type = 'password';\n  input.placeholder = 'Enter password';\n  input.style.padding = '10px';\n  input.style.width = '100%';\n  input.style.marginBottom = '10px';\n  input.style.borderRadius = '4px';\n  input.style.border = '1px solid #ccc';\n\n  // Buttons\n  submitButton.textContent = 'Submit';\n  cancelButton.textContent = 'Cancel';\n  [submitButton, cancelButton].forEach(button => {\n    button.style.padding = '10px 20px';\n    button.style.marginRight = '10px';\n    button.style.borderRadius = '4px';\n    button.style.border = 'none';\n    button.style.cursor = 'pointer';\n    button.style.transition = 'background-color 0.3s';\n  });\n\n  // Button styles\n  submitButton.style.backgroundColor = '#4CAF50'; // Green\n  cancelButton.style.backgroundColor = '#f44336'; // Red\n\n  // Change button color on click\n  submitButton.addEventListener('mousedown', () => {\n    submitButton.style.backgroundColor = '#45a049'; // Darker green\n  });\n  submitButton.addEventListener('mouseup', () => {\n    submitButton.style.backgroundColor = '#4CAF50';\n  });\n\n  cancelButton.addEventListener('mousedown', () => {\n    cancelButton.style.backgroundColor = '#e53935'; // Darker red\n  });\n  cancelButton.addEventListener('mouseup', () => {\n    cancelButton.style.backgroundColor = '#f44336';\n  });\n\n  modal.appendChild(message);\n  modal.appendChild(input);\n  modal.appendChild(submitButton);\n  modal.appendChild(cancelButton);\n  document.body.appendChild(overlay);\n  document.body.appendChild(modal);\n\n  // Event listeners\n  submitButton.addEventListener('click', () => {\n    const password = input.value;\n    if (password !== \"iplon321\") {\n      context.grafana.notifyError([\"Error\", \"Incorrect password. Update not allowed.\"]);\n      return;\n    } else {\n      // Password is correct; proceed with your logic\n      console.log(\"Password accepted!\");\n      // Clean up\n      document.body.removeChild(modal);\n      document.body.removeChild(overlay);\n      callback(); // Call the next function to execute after password validation\n    }\n  });\n  input.addEventListener('keydown', (event) => {\n    if (event.key === 'Enter') {\n      submitButton.click(); // Trigger the submit button click\n    }\n    if (event.key === 'Escape') {\n      cancelButton.click(); // Trigger the cancel button click\n    }\n  });\n  cancelButton.addEventListener('click', () => {\n    // Clean up\n    document.body.removeChild(modal);\n    document.body.removeChild(overlay);\n  });\n}\n\n\n\nfunction sendRequests() {\n\n\n  var time = new Date().getTime();\n  // Initialize the body object\n  const body = {};\n  const body1 = {};\n\n  context.panel.options.elements.forEach((element) => {\n    // Parse element id to extract required information\n    var id1 = element.id;\n    var id2 = id1.split(\",\");\n\n    var source = id2[0];\n    var id = id2[1];\n    var user = id2[2];\n    var control = id2[3];\n    var mode = id2[4];\n    var tag_name = id2[5];\n    var type = id2[6];\n    var server = id2[7];\n\n    // Construct the body for the POST request\n    body1[\"time\"] = time;\n    body1[\"source\"] = source;\n    body1[\"user\"] = user;\n    body1[\"mode\"] = mode;\n    body1[\"id\"] = parseInt(id);\n    body1[\"val\"] = parseFloat(element.value);\n    body1[\"control\"] = control;\n    body1[\"tag_name\"] = tag_name;\n    body1[\"type\"] = type;\n    body1[\"server\"] = server;\n    console.log(\"CHECK\", body1);\n\n    /**\n     * Set URLs\n     */\n    const url1 = 'http://192.168.87.82:1880/endpoint/grafana';\n    //const url2 = 'http://192.168.87.82:1880/endpoint/grafana';\n\n    /**\n     * Fetch function\n     */\n    function sendRequest(url) {\n      return fetch(url, {\n        method: \"POST\",\n        headers: {\n          \"Content-Type\": \"application/json\",\n          \"PRIVATE-TOKEN\": \"$token\",  // Ensure 'token' is defined properly\n        },\n        body: JSON.stringify(body1),\n      })\n        .then((response) => {\n          if (response && response.ok) {\n            context.grafana.notifySuccess([\"Update\", \"Values updated successfully\"]);\n            // Uncomment if you want to re-fetch initial data after update\n            // initialRequest();\n          } else {\n            context.grafana.notifyError([\n              \"Error\",\n              `An error occurred updating values: ${response ? response.status : 'Unknown'}`,\n            ]);\n          }\n        })\n        .catch((error) => {\n          context.grafana.notifyError([\n            \"Error\",\n            `An error occurred updating values: ${error.message}`,\n          ]);\n        });\n    }\n\n    // Send requests to both URLs\n    sendRequest(url1);\n    //sendRequest(url2);\n  });\n}\nshowPasswordPrompt(sendRequests);",
+          "confirm": false,
+          "contentType": "application/json",
+          "getPayload": "const payload = {};\n\ncontext.panel.elements.forEach((element) => {\n  if (!element.value) {\n    return;\n  }\n\n  payload[element.id] = element.value;\n})\n\nreturn payload;\n\n/**\n * Data Source payload\n */ \nreturn {\n  rawSql: '',\n  format: 'table',\n};",
+          "method": "-",
+          "payload": {},
+          "payloadMode": "updated"
+        },
+        "updateEnabled": "manual"
+      },
+      "pluginVersion": "5.1.0",
+      "targets": [
+        {
+          "alias": "PAC",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "deardbpejbytcd"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=",
+              "value": "MCR"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "UI"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "BLOCK_PAC_MAX_SET_RX"
+            }
+          ]
+        },
+        {
+          "alias": "QAC",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "deardbpejbytcd"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=",
+              "value": "MCR"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "UI"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "BLOCK_QAC_MAX_SET_RX"
+            }
+          ]
+        }
+      ],
+      "timeFrom": "0y/y",
+      "title": "OVERALL ICR_PEAK POWER",
+      "transparent": true,
+      "type": "volkovlabs-form-panel"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "ix-lCK3Vz"
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 5,
+        "x": 11,
+        "y": 3
+      },
+      "id": 6,
+      "options": {
+        "buttonGroup": {
+          "orientation": "left",
+          "size": "md"
+        },
+        "confirmModal": {
+          "body": "Please confirm to update changed values",
+          "cancel": "Cancel",
+          "columns": {
+            "include": [
+              "name",
+              "oldValue",
+              "newValue"
+            ],
+            "name": "Label",
+            "newValue": "New Value",
+            "oldValue": "Old Value"
+          },
+          "confirm": "Confirm",
+          "elementDisplayMode": "modified",
+          "title": "Confirm update request"
+        },
+        "elementValueChanged": "context.panel.onOptionsChange({\n  ...context.panel.options,\n  elements: context.panel.elements,\n});",
+        "elements": [
+          {
+            "allowCustomValue": false,
+            "disabled": false,
+            "id": "grafana,13062,iplon,Line,PAC_ULL_SET_RX,PAC_Upper/Lower Limit,ClosedLoop,primary",
+            "labelWidth": 20,
+            "options": [
+              {
+                "id": 0.5,
+                "label": "0.5",
+                "type": "number",
+                "value": 0.5
+              },
+              {
+                "id": 1,
+                "label": "1",
+                "type": "number",
+                "value": 1
+              },
+              {
+                "id": 1.5,
+                "label": "1.5",
+                "type": "number",
+                "value": 1.5
+              },
+              {
+                "id": 2,
+                "label": "2",
+                "type": "number",
+                "value": 2
+              },
+              {
+                "id": "0",
+                "label": "0",
+                "type": "number",
+                "value": 0
+              }
+            ],
+            "queryField": {
+              "label": "A:PAC_ULL_SET_RX",
+              "refId": "A",
+              "value": "PAC_ULL_SET_RX"
+            },
+            "section": "",
+            "title": "UP/LOW LIMIT(%)",
+            "tooltip": "",
+            "type": "select",
+            "uid": "dc2b809f-320b-4b91-9c29-913a8dda7e92",
+            "value": 0.5,
+            "width": 15
+          },
+          {
+            "allowCustomValue": false,
+            "id": "grafana,13038,iplon,Line,PAC_CL_SET_RX,PAC_Critical_Limit,ClosedLoop,primary",
+            "labelWidth": 20,
+            "options": [
+              {
+                "id": 2,
+                "label": "2",
+                "type": "number",
+                "value": 2
+              },
+              {
+                "id": 3,
+                "label": "3",
+                "type": "number",
+                "value": 3
+              },
+              {
+                "id": 4,
+                "label": "4",
+                "type": "number",
+                "value": 4
+              },
+              {
+                "id": 5,
+                "label": "5",
+                "type": "number",
+                "value": 5
+              }
+            ],
+            "queryField": {
+              "label": "B:PAC_CL_SET_RX",
+              "refId": "B",
+              "value": "PAC_CL_SET_RX"
+            },
+            "section": "",
+            "title": "CRITIC LIMIT(%)",
+            "tooltip": "",
+            "type": "select",
+            "uid": "6c6ba18f-98de-4800-8bcc-f3eaf34e0e0e",
+            "value": 2,
+            "width": 15
+          },
+          {
+            "allowCustomValue": false,
+            "disabled": false,
+            "id": "grafana,13038,iplon,Line,PAC_RMP_SET_RX,PAC_Ramp_Percent,ClosedLoop,primary",
+            "labelWidth": 20,
+            "options": [
+              {
+                "id": "10",
+                "label": "10",
+                "type": "number",
+                "value": 10
+              }
+            ],
+            "optionsSource": "Custom",
+            "queryField": {
+              "label": "C:PAC_RMP_SET_RX",
+              "refId": "C",
+              "value": "PAC_RMP_SET_RX"
+            },
+            "section": "",
+            "title": "RAMP (%)",
+            "tooltip": "",
+            "type": "select",
+            "uid": "abb71fab-ea85-4b00-b0f3-d9388dfde656",
+            "unit": "",
+            "value": 10,
+            "width": 15
+          }
+        ],
+        "initial": {
+          "code": "context.panel.enableSubmit();",
+          "contentType": "application/json",
+          "getPayload": "return {\n  rawSql: '',\n  format: 'table',\n}",
+          "highlight": false,
+          "highlightColor": "red",
+          "method": "query",
+          "payload": {},
+          "payloadMode": "all"
+        },
+        "layout": {
+          "orientation": "horizontal",
+          "padding": 10,
+          "sectionVariant": "default",
+          "variant": "single"
+        },
+        "reset": {
+          "backgroundColor": "light-blue",
+          "foregroundColor": "#000000",
+          "icon": "process",
+          "text": "Reset",
+          "variant": "custom"
+        },
+        "resetAction": {
+          "code": "if (context.panel.response && context.panel.response.ok) {\n  context.grafana.notifySuccess(['Update', 'Values updated successfully.']);\n  context.grafana.locationService.reload();\n} else {\n  context.grafana.notifyError(['Update', 'An error occured updating values.']);\n}",
+          "confirm": false,
+          "getPayload": "return {\n  rawSql: '',\n  format: 'table',\n}",
+          "mode": "initial",
+          "payload": {}
+        },
+        "saveDefault": {
+          "icon": "save",
+          "text": "Save Default",
+          "variant": "hidden"
+        },
+        "submit": {
+          "backgroundColor": "light-blue",
+          "foregroundColor": "#000000",
+          "icon": "check-circle",
+          "text": "Save",
+          "variant": "custom"
+        },
+        "sync": false,
+        "update": {
+          "code": "\n\n// Function to show the password prompt\nfunction showPasswordPrompt(callback) {\n  // Create modal elements\n  const modal = document.createElement('div');\n  const overlay = document.createElement('div');\n  const message = document.createElement('div');\n  const input = document.createElement('input');\n  const submitButton = document.createElement('button');\n  const cancelButton = document.createElement('button');\n\n  // Set attributes and styles\n  modal.style.position = 'fixed';\n  modal.style.left = '50%';\n  modal.style.top = '50%';\n  modal.style.transform = 'translate(-50%, -50%)';\n  modal.style.padding = '20px';\n  modal.style.backgroundColor = 'white';\n  modal.style.zIndex = '1000';\n  modal.style.borderRadius = '8px';\n  modal.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';\n\n  overlay.style.position = 'fixed';\n  overlay.style.top = '0';\n  overlay.style.left = '0';\n  overlay.style.width = '100%';\n  overlay.style.height = '100%';\n  overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';\n  overlay.style.zIndex = '999';\n\n  // Message above input\n  message.textContent = 'Please enter the password';\n  message.style.marginBottom = '10px';\n  message.style.fontSize = '16px';\n  message.style.fontWeight = 'bold';\n\n  // Input field\n  input.type = 'password';\n  input.placeholder = 'Enter password';\n  input.style.padding = '10px';\n  input.style.width = '100%';\n  input.style.marginBottom = '10px';\n  input.style.borderRadius = '4px';\n  input.style.border = '1px solid #ccc';\n\n  // Buttons\n  submitButton.textContent = 'Submit';\n  cancelButton.textContent = 'Cancel';\n  [submitButton, cancelButton].forEach(button => {\n    button.style.padding = '10px 20px';\n    button.style.marginRight = '10px';\n    button.style.borderRadius = '4px';\n    button.style.border = 'none';\n    button.style.cursor = 'pointer';\n    button.style.transition = 'background-color 0.3s';\n  });\n\n  // Button styles\n  submitButton.style.backgroundColor = '#4CAF50'; // Green\n  cancelButton.style.backgroundColor = '#f44336'; // Red\n\n  // Change button color on click\n  submitButton.addEventListener('mousedown', () => {\n    submitButton.style.backgroundColor = '#45a049'; // Darker green\n  });\n  submitButton.addEventListener('mouseup', () => {\n    submitButton.style.backgroundColor = '#4CAF50';\n  });\n\n  cancelButton.addEventListener('mousedown', () => {\n    cancelButton.style.backgroundColor = '#e53935'; // Darker red\n  });\n  cancelButton.addEventListener('mouseup', () => {\n    cancelButton.style.backgroundColor = '#f44336';\n  });\n\n  modal.appendChild(message);\n  modal.appendChild(input);\n  modal.appendChild(submitButton);\n  modal.appendChild(cancelButton);\n  document.body.appendChild(overlay);\n  document.body.appendChild(modal);\n\n  // Event listeners\n  submitButton.addEventListener('click', () => {\n    const password = input.value;\n    if (password !== \"iplon321\") {\n      context.grafana.notifyError([\"Error\", \"Incorrect password. Update not allowed.\"]);\n      return;\n    } else {\n      // Password is correct; proceed with your logic\n      console.log(\"Password accepted!\");\n      // Clean up\n      document.body.removeChild(modal);\n      document.body.removeChild(overlay);\n      callback(); // Call the next function to execute after password validation\n    }\n  });\n  input.addEventListener('keydown', (event) => {\n    if (event.key === 'Enter') {\n      submitButton.click(); // Trigger the submit button click\n    }\n    if (event.key === 'Escape') {\n      cancelButton.click(); // Trigger the cancel button click\n    }\n  });\n  cancelButton.addEventListener('click', () => {\n    // Clean up\n    document.body.removeChild(modal);\n    document.body.removeChild(overlay);\n  });\n}\n\n\n\nfunction sendRequests() {\n\n\n  var time = new Date().getTime();\n  // Initialize the body object\n  const body = {};\n  const body1 = {};\n\n  context.panel.options.elements.forEach((element) => {\n    // Parse element id to extract required information\n    var id1 = element.id;\n    var id2 = id1.split(\",\");\n\n    var source = id2[0];\n    var id = id2[1];\n    var user = id2[2];\n    var control = id2[3];\n    var mode = id2[4];\n    var tag_name = id2[5];\n    var type = id2[6];\n    var server = id2[7];\n\n    // Construct the body for the POST request\n    body1[\"time\"] = time;\n    body1[\"source\"] = source;\n    body1[\"user\"] = user;\n    body1[\"mode\"] = mode;\n    body1[\"id\"] = parseInt(id);\n    body1[\"val\"] = parseFloat(element.value);\n    body1[\"control\"] = control;\n    body1[\"tag_name\"] = tag_name;\n    body1[\"type\"] = type;\n    body1[\"server\"] = server;\n    console.log(\"CHECK\", body1);\n\n    /**\n     * Set URLs\n     */\n    const url1 = 'http://192.168.87.82:1880/endpoint/grafana';\n    //const url2 = 'http://192.168.87.82:1880/endpoint/grafana';\n\n    /**\n     * Fetch function\n     */\n    function sendRequest(url) {\n      return fetch(url, {\n        method: \"POST\",\n        headers: {\n          \"Content-Type\": \"application/json\",\n          \"PRIVATE-TOKEN\": \"$token\",  // Ensure 'token' is defined properly\n        },\n        body: JSON.stringify(body1),\n      })\n        .then((response) => {\n          if (response && response.ok) {\n            context.grafana.notifySuccess([\"Update\", \"Values updated successfully\"]);\n            // Uncomment if you want to re-fetch initial data after update\n            // initialRequest();\n          } else {\n            context.grafana.notifyError([\n              \"Error\",\n              `An error occurred updating values: ${response ? response.status : 'Unknown'}`,\n            ]);\n          }\n        })\n        .catch((error) => {\n          context.grafana.notifyError([\n            \"Error\",\n            `An error occurred updating values: ${error.message}`,\n          ]);\n        });\n    }\n\n    // Send requests to both URLs\n    sendRequest(url1);\n    //sendRequest(url2);\n  });\n}\nshowPasswordPrompt(sendRequests);",
+          "confirm": false,
+          "contentType": "application/json",
+          "getPayload": "const payload = {};\n\ncontext.panel.elements.forEach((element) => {\n  if (!element.value) {\n    return;\n  }\n\n  payload[element.id] = element.value;\n})\n\nreturn payload;\n\n/**\n * Data Source payload\n */ \nreturn {\n  rawSql: '',\n  format: 'table',\n};",
+          "method": "-",
+          "payload": {},
+          "payloadMode": "updated"
+        },
+        "updateEnabled": "manual"
+      },
+      "pluginVersion": "5.1.0",
+      "targets": [
+        {
+          "alias": "$tag_f",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "adongjwrjtxxca"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=",
+              "value": "MCR"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "UI"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "PAC_ULL_SET_RX"
+            }
+          ]
+        },
+        {
+          "alias": "$tag_f",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "adongjwrjtxxca"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=",
+              "value": "MCR"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "UI"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "PAC_CL_SET_RX"
+            }
+          ]
+        },
+        {
+          "alias": "$tag_f",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "adongjwrjtxxca"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=",
+              "value": "MCR"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "UI"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "PAC_RMP_SET_RX"
+            }
+          ]
+        }
+      ],
+      "title": "P_ CONTROL SETTINGS",
+      "transparent": true,
+      "type": "volkovlabs-form-panel"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "ix-lCK3Vz"
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 5,
+        "x": 16,
+        "y": 3
+      },
+      "id": 7,
+      "options": {
+        "buttonGroup": {
+          "orientation": "left",
+          "size": "md"
+        },
+        "confirmModal": {
+          "body": "Please confirm to update changed values",
+          "cancel": "Cancel",
+          "columns": {
+            "include": [
+              "name",
+              "oldValue",
+              "newValue"
+            ],
+            "name": "Label",
+            "newValue": "New Value",
+            "oldValue": "Old Value"
+          },
+          "confirm": "Confirm",
+          "elementDisplayMode": "modified",
+          "title": "Confirm update request"
+        },
+        "elementValueChanged": "context.panel.onOptionsChange({\n  ...context.panel.options,\n  elements: context.panel.elements,\n});",
+        "elements": [
+          {
+            "allowCustomValue": false,
+            "disabled": false,
+            "helpers": {},
+            "id": "grafana,13034,iplon,Line,FAC_RTD_SET_RX,FAC_Upper Limit,ClosedLoop,primary",
+            "labelWidth": 20,
+            "options": [
+              {
+                "id": "50",
+                "label": "50",
+                "type": "number",
+                "value": 50
+              }
+            ],
+            "queryField": {
+              "label": "A:FAC_RTD_SET_RX",
+              "refId": "A",
+              "value": "FAC_RTD_SET_RX"
+            },
+            "section": "",
+            "title": "RATED_FREQ",
+            "tooltip": "",
+            "type": "select",
+            "uid": "1590053f-f3a3-4e48-a33c-57cf37c822ca",
+            "value": 50,
+            "width": 15
+          },
+          {
+            "allowCustomValue": false,
+            "disabled": false,
+            "helpers": {},
+            "id": "grafana,13026,iplon,Line,FAC_DROOP,FAC_Lower Limit,ClosedLoop,primary",
+            "labelWidth": 20,
+            "options": [
+              {
+                "id": 3,
+                "label": "3",
+                "type": "number",
+                "value": 3
+              },
+              {
+                "id": 4,
+                "label": "4",
+                "type": "number",
+                "value": 4
+              },
+              {
+                "id": 5,
+                "label": "5",
+                "type": "number",
+                "value": 5
+              },
+              {
+                "id": "6",
+                "label": "6",
+                "type": "number",
+                "value": 6
+              }
+            ],
+            "queryField": {
+              "label": "B:FAC_DROOP",
+              "refId": "B",
+              "value": "FAC_DROOP"
+            },
+            "section": "",
+            "title": "FREQ_DROOP",
+            "tooltip": "",
+            "type": "select",
+            "uid": "64425cd1-14cb-4489-a9ee-73426da7a8f9",
+            "value": 5,
+            "width": 15
+          },
+          {
+            "allowCustomValue": false,
+            "disabled": false,
+            "helpers": {},
+            "id": "grafana,13026,iplon,Line,FAC_DBND,FAC_Lower Limit,ClosedLoop,primary",
+            "labelWidth": 20,
+            "options": [
+              {
+                "id": "0",
+                "label": "0",
+                "type": "number",
+                "value": 0
+              },
+              {
+                "id": "1",
+                "label": "1",
+                "type": "number",
+                "value": 1
+              },
+              {
+                "id": "2",
+                "label": "2",
+                "type": "number",
+                "value": 2
+              }
+            ],
+            "optionsSource": "Custom",
+            "queryField": {
+              "label": "C:FAC_DBND",
+              "refId": "C",
+              "value": "FAC_DBND"
+            },
+            "section": "",
+            "title": "DEAD_BAND (%)",
+            "tooltip": "",
+            "type": "select",
+            "uid": "ec05e2d3-3bf3-4b93-a9fc-70560973f7d5",
+            "unit": "",
+            "value": 0,
+            "width": 15
+          }
+        ],
+        "initial": {
+          "code": "context.panel.enableSubmit();",
+          "contentType": "application/json",
+          "getPayload": "return {\n  rawSql: '',\n  format: 'table',\n}",
+          "highlight": false,
+          "highlightColor": "red",
+          "method": "query",
+          "payload": {},
+          "payloadMode": "all"
+        },
+        "layout": {
+          "orientation": "horizontal",
+          "padding": 10,
+          "sectionVariant": "default",
+          "variant": "single"
+        },
+        "reset": {
+          "backgroundColor": "light-blue",
+          "foregroundColor": "#000000",
+          "icon": "process",
+          "text": "Reset",
+          "variant": "custom"
+        },
+        "resetAction": {
+          "code": "if (context.panel.response && context.panel.response.ok) {\n  context.grafana.notifySuccess(['Update', 'Values updated successfully.']);\n  context.grafana.locationService.reload();\n} else {\n  context.grafana.notifyError(['Update', 'An error occured updating values.']);\n}",
+          "confirm": false,
+          "getPayload": "return {\n  rawSql: '',\n  format: 'table',\n}",
+          "mode": "initial",
+          "payload": {}
+        },
+        "saveDefault": {
+          "icon": "save",
+          "text": "Save Default",
+          "variant": "hidden"
+        },
+        "submit": {
+          "backgroundColor": "light-blue",
+          "foregroundColor": "#000000",
+          "icon": "check-circle",
+          "text": "Save",
+          "variant": "custom"
+        },
+        "sync": false,
+        "update": {
+          "code": "\n\n// Function to show the password prompt\nfunction showPasswordPrompt(callback) {\n  // Create modal elements\n  const modal = document.createElement('div');\n  const overlay = document.createElement('div');\n  const message = document.createElement('div');\n  const input = document.createElement('input');\n  const submitButton = document.createElement('button');\n  const cancelButton = document.createElement('button');\n\n  // Set attributes and styles\n  modal.style.position = 'fixed';\n  modal.style.left = '50%';\n  modal.style.top = '50%';\n  modal.style.transform = 'translate(-50%, -50%)';\n  modal.style.padding = '20px';\n  modal.style.backgroundColor = 'white';\n  modal.style.zIndex = '1000';\n  modal.style.borderRadius = '8px';\n  modal.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';\n\n  overlay.style.position = 'fixed';\n  overlay.style.top = '0';\n  overlay.style.left = '0';\n  overlay.style.width = '100%';\n  overlay.style.height = '100%';\n  overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';\n  overlay.style.zIndex = '999';\n\n  // Message above input\n  message.textContent = 'Please enter the password';\n  message.style.marginBottom = '10px';\n  message.style.fontSize = '16px';\n  message.style.fontWeight = 'bold';\n\n  // Input field\n  input.type = 'password';\n  input.placeholder = 'Enter password';\n  input.style.padding = '10px';\n  input.style.width = '100%';\n  input.style.marginBottom = '10px';\n  input.style.borderRadius = '4px';\n  input.style.border = '1px solid #ccc';\n\n  // Buttons\n  submitButton.textContent = 'Submit';\n  cancelButton.textContent = 'Cancel';\n  [submitButton, cancelButton].forEach(button => {\n    button.style.padding = '10px 20px';\n    button.style.marginRight = '10px';\n    button.style.borderRadius = '4px';\n    button.style.border = 'none';\n    button.style.cursor = 'pointer';\n    button.style.transition = 'background-color 0.3s';\n  });\n\n  // Button styles\n  submitButton.style.backgroundColor = '#4CAF50'; // Green\n  cancelButton.style.backgroundColor = '#f44336'; // Red\n\n  // Change button color on click\n  submitButton.addEventListener('mousedown', () => {\n    submitButton.style.backgroundColor = '#45a049'; // Darker green\n  });\n  submitButton.addEventListener('mouseup', () => {\n    submitButton.style.backgroundColor = '#4CAF50';\n  });\n\n  cancelButton.addEventListener('mousedown', () => {\n    cancelButton.style.backgroundColor = '#e53935'; // Darker red\n  });\n  cancelButton.addEventListener('mouseup', () => {\n    cancelButton.style.backgroundColor = '#f44336';\n  });\n\n  modal.appendChild(message);\n  modal.appendChild(input);\n  modal.appendChild(submitButton);\n  modal.appendChild(cancelButton);\n  document.body.appendChild(overlay);\n  document.body.appendChild(modal);\n\n  // Event listeners\n  submitButton.addEventListener('click', () => {\n    const password = input.value;\n    if (password !== \"iplon321\") {\n      context.grafana.notifyError([\"Error\", \"Incorrect password. Update not allowed.\"]);\n      return;\n    } else {\n      // Password is correct; proceed with your logic\n      console.log(\"Password accepted!\");\n      // Clean up\n      document.body.removeChild(modal);\n      document.body.removeChild(overlay);\n      callback(); // Call the next function to execute after password validation\n    }\n  });\n  input.addEventListener('keydown', (event) => {\n    if (event.key === 'Enter') {\n      submitButton.click(); // Trigger the submit button click\n    }\n    if (event.key === 'Escape') {\n      cancelButton.click(); // Trigger the cancel button click\n    }\n  });\n  cancelButton.addEventListener('click', () => {\n    // Clean up\n    document.body.removeChild(modal);\n    document.body.removeChild(overlay);\n  });\n}\n\n\n\nfunction sendRequests() {\n\n\n  var time = new Date().getTime();\n  // Initialize the body object\n  const body = {};\n  const body1 = {};\n\n  context.panel.options.elements.forEach((element) => {\n    // Parse element id to extract required information\n    var id1 = element.id;\n    var id2 = id1.split(\",\");\n\n    var source = id2[0];\n    var id = id2[1];\n    var user = id2[2];\n    var control = id2[3];\n    var mode = id2[4];\n    var tag_name = id2[5];\n    var type = id2[6];\n    var server = id2[7];\n\n    // Construct the body for the POST request\n    body1[\"time\"] = time;\n    body1[\"source\"] = source;\n    body1[\"user\"] = user;\n    body1[\"mode\"] = mode;\n    body1[\"id\"] = parseInt(id);\n    body1[\"val\"] = parseFloat(element.value);\n    body1[\"control\"] = control;\n    body1[\"tag_name\"] = tag_name;\n    body1[\"type\"] = type;\n    body1[\"server\"] = server;\n    console.log(\"CHECK\", body1);\n\n    /**\n     * Set URLs\n     */\n    const url1 = 'http://192.168.87.82:1880/endpoint/grafana';\n    //const url2 = 'http://192.168.87.82:1880/endpoint/grafana';\n\n    /**\n     * Fetch function\n     */\n    function sendRequest(url) {\n      return fetch(url, {\n        method: \"POST\",\n        headers: {\n          \"Content-Type\": \"application/json\",\n          \"PRIVATE-TOKEN\": \"$token\",  // Ensure 'token' is defined properly\n        },\n        body: JSON.stringify(body1),\n      })\n        .then((response) => {\n          if (response && response.ok) {\n            context.grafana.notifySuccess([\"Update\", \"Values updated successfully\"]);\n            // Uncomment if you want to re-fetch initial data after update\n            // initialRequest();\n          } else {\n            context.grafana.notifyError([\n              \"Error\",\n              `An error occurred updating values: ${response ? response.status : 'Unknown'}`,\n            ]);\n          }\n        })\n        .catch((error) => {\n          context.grafana.notifyError([\n            \"Error\",\n            `An error occurred updating values: ${error.message}`,\n          ]);\n        });\n    }\n\n    // Send requests to both URLs\n    sendRequest(url1);\n    //sendRequest(url2);\n  });\n}\nshowPasswordPrompt(sendRequests);",
+          "confirm": false,
+          "contentType": "application/json",
+          "getPayload": "const payload = {};\n\ncontext.panel.elements.forEach((element) => {\n  if (!element.value) {\n    return;\n  }\n\n  payload[element.id] = element.value;\n})\n\nreturn payload;\n\n/**\n * Data Source payload\n */ \nreturn {\n  rawSql: '',\n  format: 'table',\n};",
+          "method": "-",
+          "payload": {},
+          "payloadMode": "updated"
+        },
+        "updateEnabled": "manual"
+      },
+      "pluginVersion": "5.1.0",
+      "targets": [
+        {
+          "alias": "$tag_f",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ee1j2rhfotdz4e"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=",
+              "value": "MCR"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "UI"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "FAC_RTD_SET_RX"
+            }
+          ]
+        },
+        {
+          "alias": "$tag_f",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ee1j2rhfotdz4e"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=",
+              "value": "MCR"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "UI"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "FAC_DROOP"
+            }
+          ]
+        },
+        {
+          "alias": "$tag_f",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ee1j2rhfotdz4e"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=",
+              "value": "MCR"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "UI"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "FAC_DBND"
+            }
+          ]
+        }
+      ],
+      "title": "FREQ_ CONTROL SETTINGS",
+      "transparent": true,
+      "type": "volkovlabs-form-panel"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "grafana"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "Q_CONTROL SETTINGS",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 13,
+        "x": 11,
+        "y": 9
+      },
+      "id": 14,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {
+          "titleSize": 40,
+          "valueSize": 20
+        },
+        "textMode": "name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "hide": false,
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "ix-lCK3Vz"
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 11,
+        "y": 10
+      },
+      "id": 10,
+      "options": {
+        "buttonGroup": {
+          "orientation": "left",
+          "size": "md"
+        },
+        "confirmModal": {
+          "body": "Please confirm to update changed values",
+          "cancel": "Cancel",
+          "columns": {
+            "include": [
+              "name",
+              "oldValue",
+              "newValue"
+            ],
+            "name": "Label",
+            "newValue": "New Value",
+            "oldValue": "Old Value"
+          },
+          "confirm": "Confirm",
+          "elementDisplayMode": "modified",
+          "title": "Confirm update request"
+        },
+        "elementValueChanged": "context.panel.onOptionsChange({\n  ...context.panel.options,\n  elements: context.panel.elements,\n});",
+        "elements": [
+          {
+            "allowCustomValue": false,
+            "disabled": false,
+            "helpers": {},
+            "id": "grafana,13114,iplon,Line,UAC_RTD_SET_RX,UAC_Upper/Lower Limit,ClosedLoop,primary",
+            "labelWidth": 20,
+            "options": [
+              {
+                "id": "33",
+                "label": "33",
+                "type": "number",
+                "value": 33
+              },
+              {
+                "id": "132",
+                "label": "132",
+                "type": "number",
+                "value": 132
+              },
+              {
+                "id": "220",
+                "label": "220",
+                "type": "number",
+                "value": 220
+              }
+            ],
+            "queryField": {
+              "label": "A:UAC_RTD_SET_RX",
+              "refId": "A",
+              "value": "UAC_RTD_SET_RX"
+            },
+            "section": "",
+            "title": "RATED_VOLTAGE",
+            "tooltip": "",
+            "type": "select",
+            "uid": "96369a52-ed14-441b-8356-df5b40694093",
+            "value": 220,
+            "width": 15
+          },
+          {
+            "allowCustomValue": false,
+            "disabled": false,
+            "helpers": {},
+            "id": "grafana,13104,iplon,Line,UAC_DROOP,UAC_Critical_Limit,ClosedLoop,primary",
+            "labelWidth": 20,
+            "options": [
+              {
+                "id": 3,
+                "label": "3",
+                "type": "number",
+                "value": 3
+              },
+              {
+                "id": 4,
+                "label": "4",
+                "type": "number",
+                "value": 4
+              },
+              {
+                "id": 5,
+                "label": "5",
+                "type": "number",
+                "value": 5
+              }
+            ],
+            "queryField": {
+              "label": "B:UAC_DROOP",
+              "refId": "B",
+              "value": "UAC_DROOP"
+            },
+            "section": "",
+            "title": "VOLTAGE_DROOP(%)",
+            "tooltip": "",
+            "type": "select",
+            "uid": "14e648a8-4eb1-4cdf-9591-d142c4c7ac19",
+            "value": 3,
+            "width": 15
+          },
+          {
+            "allowCustomValue": false,
+            "disabled": false,
+            "helpers": {},
+            "id": "grafana,13104,iplon,Line,UAC_DBND,UAC_Critical_Limit,ClosedLoop,primary",
+            "labelWidth": 20,
+            "options": [
+              {
+                "id": "1",
+                "label": "1",
+                "type": "number",
+                "value": 1
+              }
+            ],
+            "optionsSource": "Custom",
+            "queryField": {
+              "label": "C:UAC_DBND",
+              "refId": "C",
+              "value": "UAC_DBND"
+            },
+            "section": "",
+            "title": "DEAD_BAND (%)",
+            "tooltip": "",
+            "type": "select",
+            "uid": "59f2d810-3b51-472f-9e74-b59144c5c917",
+            "unit": "",
+            "value": 1,
+            "width": 15
+          }
+        ],
+        "initial": {
+          "code": "context.panel.enableSubmit();",
+          "contentType": "application/json",
+          "getPayload": "return {\n  rawSql: '',\n  format: 'table',\n}",
+          "highlight": false,
+          "highlightColor": "red",
+          "method": "query",
+          "payload": {},
+          "payloadMode": "all"
+        },
+        "layout": {
+          "orientation": "horizontal",
+          "padding": 10,
+          "sectionVariant": "default",
+          "variant": "single"
+        },
+        "reset": {
+          "backgroundColor": "light-blue",
+          "foregroundColor": "#000000",
+          "icon": "process",
+          "text": "Reset",
+          "variant": "custom"
+        },
+        "resetAction": {
+          "code": "if (context.panel.response && context.panel.response.ok) {\n  context.grafana.notifySuccess(['Update', 'Values updated successfully.']);\n  context.grafana.locationService.reload();\n} else {\n  context.grafana.notifyError(['Update', 'An error occured updating values.']);\n}",
+          "confirm": false,
+          "getPayload": "return {\n  rawSql: '',\n  format: 'table',\n}",
+          "mode": "initial",
+          "payload": {}
+        },
+        "saveDefault": {
+          "icon": "save",
+          "text": "Save Default",
+          "variant": "hidden"
+        },
+        "submit": {
+          "backgroundColor": "light-blue",
+          "foregroundColor": "#000000",
+          "icon": "check-circle",
+          "text": "Save",
+          "variant": "custom"
+        },
+        "sync": false,
+        "update": {
+          "code": "\n\n// Function to show the password prompt\nfunction showPasswordPrompt(callback) {\n  // Create modal elements\n  const modal = document.createElement('div');\n  const overlay = document.createElement('div');\n  const message = document.createElement('div');\n  const input = document.createElement('input');\n  const submitButton = document.createElement('button');\n  const cancelButton = document.createElement('button');\n\n  // Set attributes and styles\n  modal.style.position = 'fixed';\n  modal.style.left = '50%';\n  modal.style.top = '50%';\n  modal.style.transform = 'translate(-50%, -50%)';\n  modal.style.padding = '20px';\n  modal.style.backgroundColor = 'white';\n  modal.style.zIndex = '1000';\n  modal.style.borderRadius = '8px';\n  modal.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';\n\n  overlay.style.position = 'fixed';\n  overlay.style.top = '0';\n  overlay.style.left = '0';\n  overlay.style.width = '100%';\n  overlay.style.height = '100%';\n  overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';\n  overlay.style.zIndex = '999';\n\n  // Message above input\n  message.textContent = 'Please enter the password';\n  message.style.marginBottom = '10px';\n  message.style.fontSize = '16px';\n  message.style.fontWeight = 'bold';\n\n  // Input field\n  input.type = 'password';\n  input.placeholder = 'Enter password';\n  input.style.padding = '10px';\n  input.style.width = '100%';\n  input.style.marginBottom = '10px';\n  input.style.borderRadius = '4px';\n  input.style.border = '1px solid #ccc';\n\n  // Buttons\n  submitButton.textContent = 'Submit';\n  cancelButton.textContent = 'Cancel';\n  [submitButton, cancelButton].forEach(button => {\n    button.style.padding = '10px 20px';\n    button.style.marginRight = '10px';\n    button.style.borderRadius = '4px';\n    button.style.border = 'none';\n    button.style.cursor = 'pointer';\n    button.style.transition = 'background-color 0.3s';\n  });\n\n  // Button styles\n  submitButton.style.backgroundColor = '#4CAF50'; // Green\n  cancelButton.style.backgroundColor = '#f44336'; // Red\n\n  // Change button color on click\n  submitButton.addEventListener('mousedown', () => {\n    submitButton.style.backgroundColor = '#45a049'; // Darker green\n  });\n  submitButton.addEventListener('mouseup', () => {\n    submitButton.style.backgroundColor = '#4CAF50';\n  });\n\n  cancelButton.addEventListener('mousedown', () => {\n    cancelButton.style.backgroundColor = '#e53935'; // Darker red\n  });\n  cancelButton.addEventListener('mouseup', () => {\n    cancelButton.style.backgroundColor = '#f44336';\n  });\n\n  modal.appendChild(message);\n  modal.appendChild(input);\n  modal.appendChild(submitButton);\n  modal.appendChild(cancelButton);\n  document.body.appendChild(overlay);\n  document.body.appendChild(modal);\n\n  // Event listeners\n  submitButton.addEventListener('click', () => {\n    const password = input.value;\n    if (password !== \"iplon321\") {\n      context.grafana.notifyError([\"Error\", \"Incorrect password. Update not allowed.\"]);\n      return;\n    } else {\n      // Password is correct; proceed with your logic\n      console.log(\"Password accepted!\");\n      // Clean up\n      document.body.removeChild(modal);\n      document.body.removeChild(overlay);\n      callback(); // Call the next function to execute after password validation\n    }\n  });\n  input.addEventListener('keydown', (event) => {\n    if (event.key === 'Enter') {\n      submitButton.click(); // Trigger the submit button click\n    }\n    if (event.key === 'Escape') {\n      cancelButton.click(); // Trigger the cancel button click\n    }\n  });\n  cancelButton.addEventListener('click', () => {\n    // Clean up\n    document.body.removeChild(modal);\n    document.body.removeChild(overlay);\n  });\n}\n\n\n\nfunction sendRequests() {\n\n\n  var time = new Date().getTime();\n  // Initialize the body object\n  const body = {};\n  const body1 = {};\n\n  context.panel.options.elements.forEach((element) => {\n    // Parse element id to extract required information\n    var id1 = element.id;\n    var id2 = id1.split(\",\");\n\n    var source = id2[0];\n    var id = id2[1];\n    var user = id2[2];\n    var control = id2[3];\n    var mode = id2[4];\n    var tag_name = id2[5];\n    var type = id2[6];\n    var server = id2[7];\n\n    // Construct the body for the POST request\n    body1[\"time\"] = time;\n    body1[\"source\"] = source;\n    body1[\"user\"] = user;\n    body1[\"mode\"] = mode;\n    body1[\"id\"] = parseInt(id);\n    body1[\"val\"] = parseFloat(element.value);\n    body1[\"control\"] = control;\n    body1[\"tag_name\"] = tag_name;\n    body1[\"type\"] = type;\n    body1[\"server\"] = server;\n    console.log(\"CHECK\", body1);\n\n    /**\n     * Set URLs\n     */\n    const url1 = 'http://192.168.87.82:1880/endpoint/grafana';\n    //const url2 = 'http://192.168.87.82:1880/endpoint/grafana';\n\n    /**\n     * Fetch function\n     */\n    function sendRequest(url) {\n      return fetch(url, {\n        method: \"POST\",\n        headers: {\n          \"Content-Type\": \"application/json\",\n          \"PRIVATE-TOKEN\": \"$token\",  // Ensure 'token' is defined properly\n        },\n        body: JSON.stringify(body1),\n      })\n        .then((response) => {\n          if (response && response.ok) {\n            context.grafana.notifySuccess([\"Update\", \"Values updated successfully\"]);\n            // Uncomment if you want to re-fetch initial data after update\n            // initialRequest();\n          } else {\n            context.grafana.notifyError([\n              \"Error\",\n              `An error occurred updating values: ${response ? response.status : 'Unknown'}`,\n            ]);\n          }\n        })\n        .catch((error) => {\n          context.grafana.notifyError([\n            \"Error\",\n            `An error occurred updating values: ${error.message}`,\n          ]);\n        });\n    }\n\n    // Send requests to both URLs\n    sendRequest(url1);\n    //sendRequest(url2);\n  });\n}\nshowPasswordPrompt(sendRequests);",
+          "confirm": false,
+          "contentType": "application/json",
+          "getPayload": "const payload = {};\n\ncontext.panel.elements.forEach((element) => {\n  if (!element.value) {\n    return;\n  }\n\n  payload[element.id] = element.value;\n})\n\nreturn payload;\n\n/**\n * Data Source payload\n */ \nreturn {\n  rawSql: '',\n  format: 'table',\n};",
+          "method": "-",
+          "payload": {},
+          "payloadMode": "updated"
+        },
+        "updateEnabled": "manual"
+      },
+      "pluginVersion": "5.1.0",
+      "targets": [
+        {
+          "alias": "$tag_f",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ee1j2rhfotdz4e"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=",
+              "value": "MCR"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "UI"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "UAC_RTD_SET_RX"
+            }
+          ]
+        },
+        {
+          "alias": "$tag_f",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ee1j2rhfotdz4e"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=",
+              "value": "MCR"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "UI"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "UAC_DROOP"
+            }
+          ]
+        },
+        {
+          "alias": "$tag_f",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ee1j2rhfotdz4e"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=",
+              "value": "MCR"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "UI"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "UAC_DBND"
+            }
+          ]
+        }
+      ],
+      "title": "VOLTAGE_ CONTROL SETTINGS",
+      "transparent": true,
+      "type": "volkovlabs-form-panel"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "ix-lCK3Vz"
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 4,
+        "x": 16,
+        "y": 10
+      },
+      "id": 8,
+      "options": {
+        "buttonGroup": {
+          "orientation": "left",
+          "size": "md"
+        },
+        "confirmModal": {
+          "body": "Please confirm to update changed values",
+          "cancel": "Cancel",
+          "columns": {
+            "include": [
+              "name",
+              "oldValue",
+              "newValue"
+            ],
+            "name": "Label",
+            "newValue": "New Value",
+            "oldValue": "Old Value"
+          },
+          "confirm": "Confirm",
+          "elementDisplayMode": "modified",
+          "title": "Confirm update request"
+        },
+        "elementValueChanged": "context.panel.onOptionsChange({\n  ...context.panel.options,\n  elements: context.panel.elements,\n});",
+        "elements": [
+          {
+            "allowCustomValue": false,
+            "disabled": false,
+            "id": "grafana,13102,iplon,Line,QAC_ULL_SET_RX,QAC_Upper/Lower Limit,ClosedLoop,primary",
+            "labelWidth": 20,
+            "options": [
+              {
+                "id": 0.5,
+                "label": "0.5",
+                "type": "number",
+                "value": 0.5
+              },
+              {
+                "id": 1,
+                "label": "1",
+                "type": "number",
+                "value": 1
+              },
+              {
+                "id": 1.5,
+                "label": "1.5",
+                "type": "number",
+                "value": 1.5
+              },
+              {
+                "id": 2,
+                "label": "2",
+                "type": "number",
+                "value": 2
+              },
+              {
+                "id": "2.5",
+                "label": "2.5",
+                "type": "number",
+                "value": 2.5
+              },
+              {
+                "id": "0",
+                "label": "0",
+                "type": "number",
+                "value": 0
+              }
+            ],
+            "queryField": {
+              "label": "A:QAC_ULL_SET_RX",
+              "refId": "A",
+              "value": "QAC_ULL_SET_RX"
+            },
+            "section": "",
+            "title": "UP/LOW LIMIT(%)",
+            "tooltip": "",
+            "type": "select",
+            "uid": "8dabc9a2-6a18-41d2-a1f3-bbb01582674a",
+            "value": 0.5,
+            "width": 15
+          },
+          {
+            "allowCustomValue": false,
+            "id": "grafana,13076,iplon,Line,QAC_CL_SET_RX,QAC_Critical_Limit,ClosedLoop,primary",
+            "labelWidth": 20,
+            "options": [
+              {
+                "id": 2,
+                "label": "2",
+                "type": "number",
+                "value": 2
+              },
+              {
+                "id": 3,
+                "label": "3",
+                "type": "number",
+                "value": 3
+              },
+              {
+                "id": 4,
+                "label": "4",
+                "type": "number",
+                "value": 4
+              },
+              {
+                "id": 5,
+                "label": "5",
+                "type": "number",
+                "value": 5
+              }
+            ],
+            "queryField": {
+              "label": "B:QAC_CL_SET_RX",
+              "refId": "B",
+              "value": "QAC_CL_SET_RX"
+            },
+            "section": "",
+            "title": "CRITIC LIMIT(%)",
+            "tooltip": "",
+            "type": "select",
+            "uid": "5627fe6a-1bb1-43b6-bb57-10728db7eeb8",
+            "value": 3,
+            "width": 15
+          },
+          {
+            "allowCustomValue": false,
+            "id": "emp",
+            "labelWidth": 20,
+            "options": [],
+            "optionsSource": "Custom",
+            "section": "",
+            "title": "",
+            "tooltip": "",
+            "type": "disabled",
+            "uid": "199112cb-9fc6-4450-9f7a-a4804ece71dc",
+            "unit": "",
+            "value": "",
+            "width": 15
+          }
+        ],
+        "initial": {
+          "code": "context.panel.enableSubmit();",
+          "contentType": "application/json",
+          "getPayload": "return {\n  rawSql: '',\n  format: 'table',\n}",
+          "highlight": false,
+          "highlightColor": "red",
+          "method": "query",
+          "payload": {},
+          "payloadMode": "all"
+        },
+        "layout": {
+          "orientation": "horizontal",
+          "padding": 10,
+          "sectionVariant": "default",
+          "variant": "single"
+        },
+        "reset": {
+          "backgroundColor": "light-blue",
+          "foregroundColor": "#000000",
+          "icon": "process",
+          "text": "Reset",
+          "variant": "custom"
+        },
+        "resetAction": {
+          "code": "if (context.panel.response && context.panel.response.ok) {\n  context.grafana.notifySuccess(['Update', 'Values updated successfully.']);\n  context.grafana.locationService.reload();\n} else {\n  context.grafana.notifyError(['Update', 'An error occured updating values.']);\n}",
+          "confirm": false,
+          "getPayload": "return {\n  rawSql: '',\n  format: 'table',\n}",
+          "mode": "initial",
+          "payload": {}
+        },
+        "saveDefault": {
+          "icon": "save",
+          "text": "Save Default",
+          "variant": "hidden"
+        },
+        "submit": {
+          "backgroundColor": "light-blue",
+          "foregroundColor": "#000000",
+          "icon": "check-circle",
+          "text": "Save",
+          "variant": "custom"
+        },
+        "sync": false,
+        "update": {
+          "code": "\n\n// Function to show the password prompt\nfunction showPasswordPrompt(callback) {\n  // Create modal elements\n  const modal = document.createElement('div');\n  const overlay = document.createElement('div');\n  const message = document.createElement('div');\n  const input = document.createElement('input');\n  const submitButton = document.createElement('button');\n  const cancelButton = document.createElement('button');\n\n  // Set attributes and styles\n  modal.style.position = 'fixed';\n  modal.style.left = '50%';\n  modal.style.top = '50%';\n  modal.style.transform = 'translate(-50%, -50%)';\n  modal.style.padding = '20px';\n  modal.style.backgroundColor = 'white';\n  modal.style.zIndex = '1000';\n  modal.style.borderRadius = '8px';\n  modal.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';\n\n  overlay.style.position = 'fixed';\n  overlay.style.top = '0';\n  overlay.style.left = '0';\n  overlay.style.width = '100%';\n  overlay.style.height = '100%';\n  overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';\n  overlay.style.zIndex = '999';\n\n  // Message above input\n  message.textContent = 'Please enter the password';\n  message.style.marginBottom = '10px';\n  message.style.fontSize = '16px';\n  message.style.fontWeight = 'bold';\n\n  // Input field\n  input.type = 'password';\n  input.placeholder = 'Enter password';\n  input.style.padding = '10px';\n  input.style.width = '100%';\n  input.style.marginBottom = '10px';\n  input.style.borderRadius = '4px';\n  input.style.border = '1px solid #ccc';\n\n  // Buttons\n  submitButton.textContent = 'Submit';\n  cancelButton.textContent = 'Cancel';\n  [submitButton, cancelButton].forEach(button => {\n    button.style.padding = '10px 20px';\n    button.style.marginRight = '10px';\n    button.style.borderRadius = '4px';\n    button.style.border = 'none';\n    button.style.cursor = 'pointer';\n    button.style.transition = 'background-color 0.3s';\n  });\n\n  // Button styles\n  submitButton.style.backgroundColor = '#4CAF50'; // Green\n  cancelButton.style.backgroundColor = '#f44336'; // Red\n\n  // Change button color on click\n  submitButton.addEventListener('mousedown', () => {\n    submitButton.style.backgroundColor = '#45a049'; // Darker green\n  });\n  submitButton.addEventListener('mouseup', () => {\n    submitButton.style.backgroundColor = '#4CAF50';\n  });\n\n  cancelButton.addEventListener('mousedown', () => {\n    cancelButton.style.backgroundColor = '#e53935'; // Darker red\n  });\n  cancelButton.addEventListener('mouseup', () => {\n    cancelButton.style.backgroundColor = '#f44336';\n  });\n\n  modal.appendChild(message);\n  modal.appendChild(input);\n  modal.appendChild(submitButton);\n  modal.appendChild(cancelButton);\n  document.body.appendChild(overlay);\n  document.body.appendChild(modal);\n\n  // Event listeners\n  submitButton.addEventListener('click', () => {\n    const password = input.value;\n    if (password !== \"iplon321\") {\n      context.grafana.notifyError([\"Error\", \"Incorrect password. Update not allowed.\"]);\n      return;\n    } else {\n      // Password is correct; proceed with your logic\n      console.log(\"Password accepted!\");\n      // Clean up\n      document.body.removeChild(modal);\n      document.body.removeChild(overlay);\n      callback(); // Call the next function to execute after password validation\n    }\n  });\n  input.addEventListener('keydown', (event) => {\n    if (event.key === 'Enter') {\n      submitButton.click(); // Trigger the submit button click\n    }\n    if (event.key === 'Escape') {\n      cancelButton.click(); // Trigger the cancel button click\n    }\n  });\n  cancelButton.addEventListener('click', () => {\n    // Clean up\n    document.body.removeChild(modal);\n    document.body.removeChild(overlay);\n  });\n}\n\n\n\nfunction sendRequests() {\n\n\n  var time = new Date().getTime();\n  // Initialize the body object\n  const body = {};\n  const body1 = {};\n\n  context.panel.options.elements.forEach((element) => {\n    // Parse element id to extract required information\n    var id1 = element.id;\n    var id2 = id1.split(\",\");\n\n    var source = id2[0];\n    var id = id2[1];\n    var user = id2[2];\n    var control = id2[3];\n    var mode = id2[4];\n    var tag_name = id2[5];\n    var type = id2[6];\n    var server = id2[7];\n\n    // Construct the body for the POST request\n    body1[\"time\"] = time;\n    body1[\"source\"] = source;\n    body1[\"user\"] = user;\n    body1[\"mode\"] = mode;\n    body1[\"id\"] = parseInt(id);\n    body1[\"val\"] = parseFloat(element.value);\n    body1[\"control\"] = control;\n    body1[\"tag_name\"] = tag_name;\n    body1[\"type\"] = type;\n    body1[\"server\"] = server;\n    console.log(\"CHECK\", body1);\n\n    /**\n     * Set URLs\n     */\n    const url1 = 'http://192.168.87.82:1880/endpoint/grafana';\n    //const url2 = 'http://192.168.87.82:1880/endpoint/grafana';\n\n    /**\n     * Fetch function\n     */\n    function sendRequest(url) {\n      return fetch(url, {\n        method: \"POST\",\n        headers: {\n          \"Content-Type\": \"application/json\",\n          \"PRIVATE-TOKEN\": \"$token\",  // Ensure 'token' is defined properly\n        },\n        body: JSON.stringify(body1),\n      })\n        .then((response) => {\n          if (response && response.ok) {\n            context.grafana.notifySuccess([\"Update\", \"Values updated successfully\"]);\n            // Uncomment if you want to re-fetch initial data after update\n            // initialRequest();\n          } else {\n            context.grafana.notifyError([\n              \"Error\",\n              `An error occurred updating values: ${response ? response.status : 'Unknown'}`,\n            ]);\n          }\n        })\n        .catch((error) => {\n          context.grafana.notifyError([\n            \"Error\",\n            `An error occurred updating values: ${error.message}`,\n          ]);\n        });\n    }\n\n    // Send requests to both URLs\n    sendRequest(url1);\n    //sendRequest(url2);\n  });\n}\nshowPasswordPrompt(sendRequests);",
+          "confirm": false,
+          "contentType": "application/json",
+          "getPayload": "const payload = {};\n\ncontext.panel.elements.forEach((element) => {\n  if (!element.value) {\n    return;\n  }\n\n  payload[element.id] = element.value;\n})\n\nreturn payload;\n\n/**\n * Data Source payload\n */ \nreturn {\n  rawSql: '',\n  format: 'table',\n};",
+          "method": "-",
+          "payload": {},
+          "payloadMode": "updated"
+        },
+        "updateEnabled": "manual"
+      },
+      "pluginVersion": "5.1.0",
+      "targets": [
+        {
+          "alias": "$tag_f",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ee1j2rhfotdz4e"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=",
+              "value": "MCR"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "UI"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "QAC_ULL_SET_RX"
+            }
+          ]
+        },
+        {
+          "alias": "$tag_f",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ee1j2rhfotdz4e"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=",
+              "value": "MCR"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "UI"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "QAC_CL_SET_RX"
+            }
+          ]
+        }
+      ],
+      "title": "Q_ CONTROL SETTINGS",
+      "transparent": true,
+      "type": "volkovlabs-form-panel"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "ix-lCK3Vz"
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 20,
+        "y": 10
+      },
+      "id": 9,
+      "options": {
+        "buttonGroup": {
+          "orientation": "left",
+          "size": "md"
+        },
+        "confirmModal": {
+          "body": "Please confirm to update changed values",
+          "cancel": "Cancel",
+          "columns": {
+            "include": [
+              "name",
+              "oldValue",
+              "newValue"
+            ],
+            "name": "Label",
+            "newValue": "New Value",
+            "oldValue": "Old Value"
+          },
+          "confirm": "Confirm",
+          "elementDisplayMode": "modified",
+          "title": "Confirm update request"
+        },
+        "elementValueChanged": "context.panel.onOptionsChange({\n  ...context.panel.options,\n  elements: context.panel.elements,\n});",
+        "elements": [
+          {
+            "allowCustomValue": false,
+            "disabled": false,
+            "id": "grafana,13073,iplon,Line,PF_TH_SET_RX,PF_Upper Limit,ClosedLoop,primary",
+            "labelWidth": 20,
+            "options": [
+              {
+                "id": 0.004,
+                "label": "0.004",
+                "type": "number",
+                "value": 0.004
+              },
+              {
+                "id": "0.008",
+                "label": "0.008",
+                "type": "number",
+                "value": 0.008
+              },
+              {
+                "id": "0.02",
+                "label": "0.02",
+                "type": "number",
+                "value": 0.02
+              },
+              {
+                "id": "0",
+                "label": "0",
+                "type": "number",
+                "value": 0
+              }
+            ],
+            "queryField": {
+              "label": "A:PF_TH_SET_RX",
+              "refId": "A",
+              "value": "PF_TH_SET_RX"
+            },
+            "section": "",
+            "title": "THRESHOLD (%)",
+            "tooltip": "",
+            "type": "select",
+            "uid": "fede52ab-a458-472d-b806-0e1ef054fabe",
+            "value": 0.02,
+            "width": 15
+          },
+          {
+            "allowCustomValue": false,
+            "id": "emp1",
+            "labelWidth": 20,
+            "options": [],
+            "optionsSource": "Custom",
+            "section": "",
+            "title": "",
+            "tooltip": "",
+            "type": "disabled",
+            "uid": "d7f7278c-a860-423b-80dc-6c16b7fb3fed",
+            "unit": "",
+            "value": "",
+            "width": 15
+          },
+          {
+            "allowCustomValue": false,
+            "id": "emp2",
+            "labelWidth": 20,
+            "options": [],
+            "optionsSource": "Custom",
+            "section": "",
+            "title": "",
+            "tooltip": "",
+            "type": "disabled",
+            "uid": "a0db5391-8ef9-41eb-9704-6f6123ad4714",
+            "unit": "",
+            "value": "",
+            "width": 15
+          }
+        ],
+        "initial": {
+          "code": "context.panel.enableSubmit();",
+          "contentType": "application/json",
+          "getPayload": "return {\n  rawSql: '',\n  format: 'table',\n}",
+          "highlight": false,
+          "highlightColor": "red",
+          "method": "query",
+          "payload": {},
+          "payloadMode": "all"
+        },
+        "layout": {
+          "orientation": "horizontal",
+          "padding": 10,
+          "sectionVariant": "default",
+          "variant": "single"
+        },
+        "reset": {
+          "backgroundColor": "light-blue",
+          "foregroundColor": "#000000",
+          "icon": "process",
+          "text": "Reset",
+          "variant": "custom"
+        },
+        "resetAction": {
+          "code": "if (context.panel.response && context.panel.response.ok) {\n  context.grafana.notifySuccess(['Update', 'Values updated successfully.']);\n  context.grafana.locationService.reload();\n} else {\n  context.grafana.notifyError(['Update', 'An error occured updating values.']);\n}",
+          "confirm": false,
+          "getPayload": "return {\n  rawSql: '',\n  format: 'table',\n}",
+          "mode": "initial",
+          "payload": {}
+        },
+        "saveDefault": {
+          "icon": "save",
+          "text": "Save Default",
+          "variant": "hidden"
+        },
+        "submit": {
+          "backgroundColor": "light-blue",
+          "foregroundColor": "#000000",
+          "icon": "check-circle",
+          "text": "Save",
+          "variant": "custom"
+        },
+        "sync": false,
+        "update": {
+          "code": "\n\n// Function to show the password prompt\nfunction showPasswordPrompt(callback) {\n  // Create modal elements\n  const modal = document.createElement('div');\n  const overlay = document.createElement('div');\n  const message = document.createElement('div');\n  const input = document.createElement('input');\n  const submitButton = document.createElement('button');\n  const cancelButton = document.createElement('button');\n\n  // Set attributes and styles\n  modal.style.position = 'fixed';\n  modal.style.left = '50%';\n  modal.style.top = '50%';\n  modal.style.transform = 'translate(-50%, -50%)';\n  modal.style.padding = '20px';\n  modal.style.backgroundColor = 'white';\n  modal.style.zIndex = '1000';\n  modal.style.borderRadius = '8px';\n  modal.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';\n\n  overlay.style.position = 'fixed';\n  overlay.style.top = '0';\n  overlay.style.left = '0';\n  overlay.style.width = '100%';\n  overlay.style.height = '100%';\n  overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';\n  overlay.style.zIndex = '999';\n\n  // Message above input\n  message.textContent = 'Please enter the password';\n  message.style.marginBottom = '10px';\n  message.style.fontSize = '16px';\n  message.style.fontWeight = 'bold';\n\n  // Input field\n  input.type = 'password';\n  input.placeholder = 'Enter password';\n  input.style.padding = '10px';\n  input.style.width = '100%';\n  input.style.marginBottom = '10px';\n  input.style.borderRadius = '4px';\n  input.style.border = '1px solid #ccc';\n\n  // Buttons\n  submitButton.textContent = 'Submit';\n  cancelButton.textContent = 'Cancel';\n  [submitButton, cancelButton].forEach(button => {\n    button.style.padding = '10px 20px';\n    button.style.marginRight = '10px';\n    button.style.borderRadius = '4px';\n    button.style.border = 'none';\n    button.style.cursor = 'pointer';\n    button.style.transition = 'background-color 0.3s';\n  });\n\n  // Button styles\n  submitButton.style.backgroundColor = '#4CAF50'; // Green\n  cancelButton.style.backgroundColor = '#f44336'; // Red\n\n  // Change button color on click\n  submitButton.addEventListener('mousedown', () => {\n    submitButton.style.backgroundColor = '#45a049'; // Darker green\n  });\n  submitButton.addEventListener('mouseup', () => {\n    submitButton.style.backgroundColor = '#4CAF50';\n  });\n\n  cancelButton.addEventListener('mousedown', () => {\n    cancelButton.style.backgroundColor = '#e53935'; // Darker red\n  });\n  cancelButton.addEventListener('mouseup', () => {\n    cancelButton.style.backgroundColor = '#f44336';\n  });\n\n  modal.appendChild(message);\n  modal.appendChild(input);\n  modal.appendChild(submitButton);\n  modal.appendChild(cancelButton);\n  document.body.appendChild(overlay);\n  document.body.appendChild(modal);\n\n  // Event listeners\n  submitButton.addEventListener('click', () => {\n    const password = input.value;\n    if (password !== \"iplon321\") {\n      context.grafana.notifyError([\"Error\", \"Incorrect password. Update not allowed.\"]);\n      return;\n    } else {\n      // Password is correct; proceed with your logic\n      console.log(\"Password accepted!\");\n      // Clean up\n      document.body.removeChild(modal);\n      document.body.removeChild(overlay);\n      callback(); // Call the next function to execute after password validation\n    }\n  });\n  input.addEventListener('keydown', (event) => {\n    if (event.key === 'Enter') {\n      submitButton.click(); // Trigger the submit button click\n    }\n    if (event.key === 'Escape') {\n      cancelButton.click(); // Trigger the cancel button click\n    }\n  });\n  cancelButton.addEventListener('click', () => {\n    // Clean up\n    document.body.removeChild(modal);\n    document.body.removeChild(overlay);\n  });\n}\n\n\n\nfunction sendRequests() {\n\n\n  var time = new Date().getTime();\n  // Initialize the body object\n  const body = {};\n  const body1 = {};\n\n  context.panel.options.elements.forEach((element) => {\n    // Parse element id to extract required information\n    var id1 = element.id;\n    var id2 = id1.split(\",\");\n\n    var source = id2[0];\n    var id = id2[1];\n    var user = id2[2];\n    var control = id2[3];\n    var mode = id2[4];\n    var tag_name = id2[5];\n    var type = id2[6];\n    var server = id2[7];\n\n    // Construct the body for the POST request\n    body1[\"time\"] = time;\n    body1[\"source\"] = source;\n    body1[\"user\"] = user;\n    body1[\"mode\"] = mode;\n    body1[\"id\"] = parseInt(id);\n    body1[\"val\"] = parseFloat(element.value);\n    body1[\"control\"] = control;\n    body1[\"tag_name\"] = tag_name;\n    body1[\"type\"] = type;\n    body1[\"server\"] = server;\n    console.log(\"CHECK\", body1);\n\n    /**\n     * Set URLs\n     */\n    const url1 = 'http://192.168.87.82:1880/endpoint/grafana';\n    //const url2 = 'http://192.168.87.82:1880/endpoint/grafana';\n\n    /**\n     * Fetch function\n     */\n    function sendRequest(url) {\n      return fetch(url, {\n        method: \"POST\",\n        headers: {\n          \"Content-Type\": \"application/json\",\n          \"PRIVATE-TOKEN\": \"$token\",  // Ensure 'token' is defined properly\n        },\n        body: JSON.stringify(body1),\n      })\n        .then((response) => {\n          if (response && response.ok) {\n            context.grafana.notifySuccess([\"Update\", \"Values updated successfully\"]);\n            // Uncomment if you want to re-fetch initial data after update\n            // initialRequest();\n          } else {\n            context.grafana.notifyError([\n              \"Error\",\n              `An error occurred updating values: ${response ? response.status : 'Unknown'}`,\n            ]);\n          }\n        })\n        .catch((error) => {\n          context.grafana.notifyError([\n            \"Error\",\n            `An error occurred updating values: ${error.message}`,\n          ]);\n        });\n    }\n\n    // Send requests to both URLs\n    sendRequest(url1);\n    //sendRequest(url2);\n  });\n}\nshowPasswordPrompt(sendRequests);",
+          "confirm": false,
+          "contentType": "application/json",
+          "getPayload": "const payload = {};\n\ncontext.panel.elements.forEach((element) => {\n  if (!element.value) {\n    return;\n  }\n\n  payload[element.id] = element.value;\n})\n\nreturn payload;\n\n/**\n * Data Source payload\n */ \nreturn {\n  rawSql: '',\n  format: 'table',\n};",
+          "method": "-",
+          "payload": {},
+          "payloadMode": "updated"
+        },
+        "updateEnabled": "manual"
+      },
+      "pluginVersion": "5.1.0",
+      "targets": [
+        {
+          "alias": "$tag_f",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ee1j2rhfotdz4e"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=",
+              "value": "MCR"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "UI"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "PF_TH_SET_RX"
+            }
+          ]
+        }
+      ],
+      "title": "PF_ CONTROL SETTING",
+      "transparent": true,
+      "type": "volkovlabs-form-panel"
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 39,
+  "tags": [
+    "ppc1"
+  ],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "04.Power_Control_Settings",
+          "value": "04.Power_Control_Settings"
+        },
+        "hide": 2,
+        "includeAll": false,
+        "label": "Screen",
+        "multi": false,
+        "name": "Screen",
+        "options": [
+          {
+            "selected": false,
+            "text": "01.Plant_Overview",
+            "value": "01.Plant_Overview"
+          },
+          {
+            "selected": false,
+            "text": "02.Setpoints_Overview",
+            "value": "02.Setpoints_Overview"
+          },
+          {
+            "selected": false,
+            "text": "03.Control_Trends",
+            "value": "03.Control_Trends"
+          },
+          {
+            "selected": true,
+            "text": "04.Power_Control_Settings",
+            "value": "04.Power_Control_Settings"
+          },
+          {
+            "selected": false,
+            "text": "05.Dynamic Control",
+            "value": "05.Dynamic Control"
+          }
+        ],
+        "query": "01.Plant_Overview,02.Setpoints_Overview,03.Control_Trends,04.Power_Control_Settings,05.Dynamic Control",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "aehoev5g87uv4d",
+          "value": "aehoev5g87uv4d"
+        },
+        "datasource": {
+          "type": "yesoreyeram-infinity-datasource",
+          "uid": "eeql8uq08xkw0a"
+        },
+        "definition": "yesoreyeram-infinity-datasource- (infinity) csv",
+        "hide": 2,
+        "includeAll": false,
+        "multi": false,
+        "name": "dashid",
+        "options": [],
+        "query": {
+          "infinityQuery": {
+            "columns": [],
+            "data": "screen,dashid\n01.Plant_Overview,feh6mk7culyiof\n02.Setpoints_Overview,feh6b0yyu9mgwc\n03.Control_Trends,ee3bry5jez5dsa\n04.Power_Control_Settings,aehoev5g87uv4d\n05.Dynamic Control,bdz1ifxc3h0jka",
+            "filters": [],
+            "format": "table",
+            "parser": "uql",
+            "refId": "variable",
+            "root_selector": "",
+            "source": "inline",
+            "type": "csv",
+            "uql": "parse-csv\n| where \"screen\" == '$Screen'\n| project \"dashid\"",
+            "url": "",
+            "url_options": {
+              "data": "",
+              "method": "GET"
+            }
+          },
+          "query": "",
+          "queryType": "infinity"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timeRangeUpdatedDuringEditOrView": false,
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "06.Power_Control_Settings",
+  "uid": "aehoev5g87uv4d",
+  "version": 9,
+  "weekStart": ""
+}

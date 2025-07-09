@@ -1,0 +1,2095 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 6,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "eeql8uq08xkw0a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "thresholdsStyle": {
+              "mode": "color",
+              "thresholds": []
+            }
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "dark-green",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 19,
+        "x": 5,
+        "y": 0
+      },
+      "id": 13,
+      "options": {
+        "alertCustomMessage": "",
+        "alwaysVisibleFilter": false,
+        "autoScroll": false,
+        "browserTabNamePattern": "",
+        "collapsedByDefault": false,
+        "customValue": false,
+        "dashboardVariable": "dashid",
+        "displayMode": "button",
+        "emptyValue": false,
+        "favorites": {
+          "addQuery": {},
+          "datasource": "",
+          "deleteQuery": {},
+          "enabled": false,
+          "getQuery": {},
+          "storage": "browser"
+        },
+        "filter": false,
+        "groupSelection": false,
+        "header": true,
+        "isMinimizeForTable": false,
+        "isUseLocalTime": false,
+        "minimizeOutputFormat": "text",
+        "padding": 10,
+        "persistent": false,
+        "saveSelectedGroup": false,
+        "saveSelectedGroupKey": "",
+        "selectedValues": {
+          "maxCount": 0,
+          "showSelected": false
+        },
+        "showGroupTotal": false,
+        "showLabel": false,
+        "showName": false,
+        "showResetButton": false,
+        "showTotal": false,
+        "statusSort": false,
+        "sticky": false,
+        "tabsInOrder": true,
+        "variable": "Screen"
+      },
+      "pluginVersion": "4.0.0",
+      "targets": [
+        {
+          "columns": [],
+          "data": "data,value\n$Screen,1",
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "eeql8uq08xkw0a"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "parser": "uql",
+          "refId": "A",
+          "root_selector": "",
+          "source": "inline",
+          "type": "csv",
+          "uql": "parse-csv",
+          "url": "",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "volkovlabs-variable-panel"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "ix-lCK3Vz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "Active_Set_Point:",
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "dark-green",
+                  "index": 1,
+                  "text": "STATIC_CONTROL"
+                },
+                "1": {
+                  "color": "dark-green",
+                  "index": 0,
+                  "text": "DYNAMIC_CONTROL"
+                },
+                "2": {
+                  "color": "red",
+                  "index": 2,
+                  "text": "FREE_RUNNING"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0
+              },
+              {
+                "color": "dark-green",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "MW"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 6,
+        "x": 0,
+        "y": 2
+      },
+      "id": 2,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {
+          "titleSize": 20,
+          "valueSize": 20
+        },
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "alias": "$tag_f",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ix-lCK3Vz"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "SETPOINT"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "PAC_PC_RX"
+            }
+          ]
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "ix-lCK3Vz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "Active_Actual:",
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "dark-green",
+                  "index": 1,
+                  "text": "STATIC_CONTROL"
+                },
+                "1": {
+                  "color": "dark-green",
+                  "index": 0,
+                  "text": "DYNAMIC_CONTROL"
+                },
+                "2": {
+                  "color": "red",
+                  "index": 2,
+                  "text": "FREE_RUNNING"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0
+              },
+              {
+                "color": "dark-green",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "MW"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 6,
+        "x": 6,
+        "y": 2
+      },
+      "id": 10,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {
+          "titleSize": 20,
+          "valueSize": 20
+        },
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "alias": "$tag_f",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ix-lCK3Vz"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "VR_EM"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "PAC"
+            }
+          ]
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "ix-lCK3Vz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "Reactive_Set_Point:",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0
+              },
+              {
+                "color": "dark-green",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "MVAr"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 6,
+        "x": 12,
+        "y": 2
+      },
+      "id": 11,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {
+          "titleSize": 20,
+          "valueSize": 20
+        },
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "alias": "$tag_f",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ix-lCK3Vz"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "SETPOINT"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "QAC_PC_RX"
+            }
+          ]
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "ix-lCK3Vz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "Reactive_Actual:",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": -15
+              },
+              {
+                "color": "dark-green",
+                "value": -2
+              },
+              {
+                "color": "dark-green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 2
+              }
+            ]
+          },
+          "unit": "MVAr"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 6,
+        "x": 18,
+        "y": 2
+      },
+      "id": 12,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {
+          "titleSize": 20,
+          "valueSize": 20
+        },
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "alias": "$tag_f",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ix-lCK3Vz"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "f::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=",
+              "value": "VR_EM"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "QAC"
+            }
+          ]
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "ix-lCK3Vz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "center",
+            "cellOptions": {
+              "type": "auto",
+              "wrapText": false
+            },
+            "filterable": true,
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "DEVICE"
+            },
+            "properties": [
+              {
+                "id": "custom.align",
+                "value": "left"
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-background"
+                }
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "dark-blue",
+                      "value": null
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "custom.width",
+                "value": 294
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Final_kVAr"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 128
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Active_Power"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 155
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Reactive_Power"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 143
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "COMM"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "0": {
+                        "color": "dark-red",
+                        "index": 1,
+                        "text": "DISABLED"
+                      },
+                      "1": {
+                        "color": "dark-green",
+                        "index": 0,
+                        "text": "ENABLED"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-background"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "COMMUNICATION"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "0": {
+                        "color": "dark-red",
+                        "index": 1,
+                        "text": "COMM_FAIL"
+                      },
+                      "1": {
+                        "color": "dark-green",
+                        "index": 0,
+                        "text": "COMM"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-background"
+                }
+              },
+              {
+                "id": "custom.width",
+                "value": 318
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Active_Power (KW)"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 458
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Reactive_Power (KVAR)"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 413
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 20,
+        "w": 24,
+        "x": 0,
+        "y": 4
+      },
+      "hideTimeOverride": true,
+      "id": 1,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": true
+        },
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ix-lCK3Vz"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1d,-330m"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "b::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "d::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "fd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "bd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "dd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "I",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=~",
+              "value": "/.*./"
+            },
+            {
+              "condition": "AND",
+              "key": "dt::tag",
+              "operator": "=",
+              "value": "INVERTER"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=~",
+              "value": "/.*./"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "PAC"
+            }
+          ]
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ix-lCK3Vz"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1d,-330m"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "b::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "d::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "fd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "bd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "dd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "J",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=~",
+              "value": "/.*./"
+            },
+            {
+              "condition": "AND",
+              "key": "dt::tag",
+              "operator": "=",
+              "value": "INVERTER"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=~",
+              "value": "/.*./"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "QAC"
+            }
+          ]
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ix-lCK3Vz"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1d,-330m"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "b::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "d::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "fd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "bd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "dd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "K",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=~",
+              "value": "/.*./"
+            },
+            {
+              "condition": "AND",
+              "key": "dt::tag",
+              "operator": "=",
+              "value": "INVERTER"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=~",
+              "value": "/.*./"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "COMM"
+            }
+          ]
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ix-lCK3Vz"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1d,-330m"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "b::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "d::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "fd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "bd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "dd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "M",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=~",
+              "value": "/.*./"
+            },
+            {
+              "condition": "AND",
+              "key": "dt::tag",
+              "operator": "=",
+              "value": "INVERTER"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=~",
+              "value": "/.*./"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "OLD_PAC_LIMIT"
+            }
+          ]
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ix-lCK3Vz"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1d,-330m"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "b::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "d::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "fd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "bd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "dd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": true,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "H",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=~",
+              "value": "/.*./"
+            },
+            {
+              "condition": "AND",
+              "key": "dt::tag",
+              "operator": "=",
+              "value": "INVERTER"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=~",
+              "value": "/.*./"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "select tag value"
+            }
+          ]
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ix-lCK3Vz"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1d,-330m"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "b::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "d::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "fd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "bd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "dd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=~",
+              "value": "/.*./"
+            },
+            {
+              "condition": "AND",
+              "key": "dt::tag",
+              "operator": "=",
+              "value": "INVERTER"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=~",
+              "value": "/.*./"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "OLD_QAC_LIMIT"
+            }
+          ]
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ix-lCK3Vz"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1d,-330m"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "b::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "d::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "fd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "bd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "dd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": true,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=~",
+              "value": "/.*./"
+            },
+            {
+              "condition": "AND",
+              "key": "dt::tag",
+              "operator": "=",
+              "value": "ENERGYMETER"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=~",
+              "value": "/.*./"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "MCR"
+            }
+          ]
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ix-lCK3Vz"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1d,-330m"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "b::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "d::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "fd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "bd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "dd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": true,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "C",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=~",
+              "value": "/.*./"
+            },
+            {
+              "condition": "AND",
+              "key": "dt::tag",
+              "operator": "=",
+              "value": "ENERGY_METER"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=~",
+              "value": "/.*./"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "PAC"
+            }
+          ]
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ix-lCK3Vz"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1d,-330m"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "b::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "d::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "fd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "bd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "dd::tag"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": true,
+          "measurement": "v",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "D",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "p::tag",
+              "operator": "=",
+              "value": "Truboard"
+            },
+            {
+              "condition": "AND",
+              "key": "b::tag",
+              "operator": "=~",
+              "value": "/.*./"
+            },
+            {
+              "condition": "AND",
+              "key": "dt::tag",
+              "operator": "=",
+              "value": "ENERGY_METER"
+            },
+            {
+              "condition": "AND",
+              "key": "d::tag",
+              "operator": "=~",
+              "value": "/.*./"
+            },
+            {
+              "condition": "AND",
+              "key": "f::tag",
+              "operator": "=",
+              "value": "QAC"
+            }
+          ]
+        }
+      ],
+      "timeFrom": "1m",
+      "transformations": [
+        {
+          "id": "merge",
+          "options": {}
+        },
+        {
+          "id": "prepareTimeSeries",
+          "options": {
+            "format": "long"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {}
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "mode": "reduceRow",
+            "reduce": {
+              "include": [
+                "d",
+                "b"
+              ],
+              "reducer": "uniqueValues"
+            },
+            "replaceFields": false
+          }
+        },
+        {
+          "id": "groupingToMatrix",
+          "options": {
+            "columnField": "fd",
+            "rowField": "All unique values",
+            "valueField": "last"
+          }
+        },
+        {
+          "id": "groupBy",
+          "options": {
+            "fields": {
+              "Active_Power": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "Active_Power_Limit": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "All unique values\\fd": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "COMM": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "COMMUNICATION": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "Corrected_AC": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "DEVICE": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "Final_MVAr": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "Fixed_Module_DC": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "Fixed_Module_PR": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "Inverter_Capability": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "OLD_PAC_LIMIT": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "OLD_QAC_LIMIT": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "PAC": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "QAC": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "Reactive_Power": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "Reactive_Power_Limit": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "Tracker_Module_DC": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "Tracker_Module_PR": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "Usable_MVAr": {
+                "aggregations": [],
+                "operation": "groupby"
+              }
+            }
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {},
+            "includeByName": {},
+            "indexByName": {
+              "Active_Power": 11,
+              "All unique values\\fd": 0,
+              "COMM": 2,
+              "COMMUNICATION": 1,
+              "Corrected_AC": 7,
+              "Final_MVAr": 10,
+              "Fixed_Module_DC": 3,
+              "Fixed_Module_PR": 4,
+              "Inverter_Capability": 8,
+              "Reactive_Power": 12,
+              "Tracker_Module_DC": 5,
+              "Tracker_Module_PR": 6,
+              "Usable_MVAr": 9
+            },
+            "renameByName": {
+              "Active_Power": "Active_Power (KW)",
+              "All unique values\\fd": "DEVICE",
+              "COMM": "REACTIVE ENABLED",
+              "Final_MVAr": "Final_kVAr",
+              "OLD_PAC_LIMIT": "ACTIVE POWER LIMIT (kW)",
+              "OLD_QAC_LIMIT": "REACTIVE POWER LIMIT (kVAR)",
+              "PAC": "ACTIVE POWER (kW)",
+              "QAC": "REACTIVE POWER (kVAR)",
+              "Reactive_Power": "Reactive_Power (KVAR)",
+              "Usable_MVAr": "Usable_kVAr"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "Active Power Avail",
+            "binary": {
+              "left": "Inverter_Capability",
+              "operator": "-",
+              "right": "Active_Power"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "Reactive Power Avail",
+            "binary": {
+              "left": "Usable_kVAr",
+              "operator": "-",
+              "right": "Reactive_Power"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        }
+      ],
+      "type": "table"
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 39,
+  "tags": [
+    "ppc1"
+  ],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "02.Setpoints_Overview",
+          "value": "02.Setpoints_Overview"
+        },
+        "hide": 2,
+        "includeAll": false,
+        "label": "Screen",
+        "multi": false,
+        "name": "Screen",
+        "options": [
+          {
+            "selected": false,
+            "text": "01.Plant_Overview",
+            "value": "01.Plant_Overview"
+          },
+          {
+            "selected": true,
+            "text": "02.Setpoints_Overview",
+            "value": "02.Setpoints_Overview"
+          },
+          {
+            "selected": false,
+            "text": "03.Control_Trends",
+            "value": "03.Control_Trends"
+          },
+          {
+            "selected": false,
+            "text": "04.Power_Control_Settings",
+            "value": "04.Power_Control_Settings"
+          },
+          {
+            "selected": false,
+            "text": "05.Dynamic Control",
+            "value": "05.Dynamic Control"
+          }
+        ],
+        "query": "01.Plant_Overview,02.Setpoints_Overview,03.Control_Trends,04.Power_Control_Settings,05.Dynamic Control",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "feh6b0yyu9mgwc",
+          "value": "feh6b0yyu9mgwc"
+        },
+        "datasource": {
+          "type": "yesoreyeram-infinity-datasource",
+          "uid": "eeql8uq08xkw0a"
+        },
+        "definition": "yesoreyeram-infinity-datasource- (infinity) csv",
+        "hide": 2,
+        "includeAll": false,
+        "multi": false,
+        "name": "dashid",
+        "options": [],
+        "query": {
+          "infinityQuery": {
+            "columns": [],
+            "data": "screen,dashid\n01.Plant_Overview,feh6mk7culyiof\n02.Setpoints_Overview,feh6b0yyu9mgwc\n03.Control_Trends,ee3bry5jez5dsa\n04.Power_Control_Settings,aehoev5g87uv4d\n05.Dynamic Control,bdz1ifxc3h0jka",
+            "filters": [],
+            "format": "table",
+            "parser": "uql",
+            "refId": "variable",
+            "root_selector": "",
+            "source": "inline",
+            "type": "csv",
+            "uql": "parse-csv\n| where \"screen\" == '$Screen'\n| project \"dashid\" ",
+            "url": "",
+            "url_options": {
+              "data": "",
+              "method": "GET"
+            }
+          },
+          "query": "",
+          "queryType": "infinity"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now/d",
+    "to": "now/d"
+  },
+  "timeRangeUpdatedDuringEditOrView": false,
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "02.Setpoint for Active|Reactive Power",
+  "uid": "feh6b0yyu9mgwc",
+  "version": 14,
+  "weekStart": ""
+}
