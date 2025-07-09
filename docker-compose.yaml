@@ -36,7 +36,6 @@ services:
     restart: always
     privileged: true
 
-
   rabbitmq:
     container_name: rabbitMQ
     image: igate-ivpn.iplon.co.in:8080/inverter-engine/rabbitmq:3.12.2
